@@ -1,0 +1,33 @@
+.flex-row {
+	display: flex;
+	width: 100%;
+
+	> * {
+		flex: 1;
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&--h-center {
+		justify-content: center;
+
+		> * {
+			flex: 0 0 auto;
+		}
+	}
+
+	&--h-right {
+		justify-content: flex-end;
+
+		> * {
+			flex: 0 0 auto;
+		}
+	}
+
+	&--v-end {
+		align-items: flex-end;
+	}
+}

@@ -1,0 +1,18 @@
+.categories-main {
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0) 100px,
+			$lightGrey 250px
+		),
+		url('./images/lightbg.jpg') top / contain no-repeat;
+	background-color: $lightGrey;
+	padding: 5px;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+@include media-gte-sm {
+	.categories-main {
+		padding: 20px 0;
+	}
+}

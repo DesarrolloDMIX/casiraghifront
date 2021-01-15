@@ -1,0 +1,10 @@
+.water-mark {
+	margin: 0 auto;
+	width: 150px;
+	opacity: 0.2;
+
+	@include media-gte-lg {
+		order: 5;
+		opacity: 0.8;
+	}
+}

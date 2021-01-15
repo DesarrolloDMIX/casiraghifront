@@ -1,0 +1,15 @@
+.separator {
+	background-color: $primaryColor;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 20px 0;
+
+	img {
+		width: 150px;
+	}
+
+	&--no-margin {
+		margin: 0;
+	}
+}

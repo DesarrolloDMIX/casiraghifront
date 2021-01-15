@@ -1,0 +1,35 @@
+.feature {
+	padding: 15px;
+	border-bottom: 1px solid $midGrey;
+
+	&__title {
+		font-weight: 500;
+	}
+	&__img {
+		border-radius: 5px;
+		max-width: 370px;
+	}
+	&__text {
+		font-size: 0.8rem;
+		line-height: 2.2;
+	}
+
+	&:last-child {
+		@include ternium;
+	}
+
+	@include media-gte-sm {
+		&__text {
+			font-size: 1rem;
+		}
+	}
+	@include media-gte-lg {
+		&__title {
+			height: 2.2rem;
+			font-size: 1.1rem;
+		}
+		&__text {
+			font-size: 0.9rem;
+		}
+	}
+}

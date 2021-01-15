@@ -1,0 +1,13 @@
+.graph {
+	background-color: $darkBg;
+
+	&:not(:first-child) {
+		margin-top: 3px;
+	}
+
+	@include media-gte-lg {
+		&:not(:first-child) {
+			margin-top: 0;
+		}
+	}
+}

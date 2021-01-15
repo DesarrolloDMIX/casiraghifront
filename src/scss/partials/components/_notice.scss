@@ -1,0 +1,17 @@
+.notice {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    padding: 15px;
+    background-color: #f1f1f1;
+    color: #3c3c3c;
+    border: 2px solid #46b6ae;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+
+    &--show {
+        visibility: visible;
+        opacity: 1;
+    }
+}

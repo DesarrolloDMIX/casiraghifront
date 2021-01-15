@@ -1,0 +1,22 @@
+.phone-fixed-button {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 20px;
+	right: 70px;
+	background-color: #4054b2;
+	border-radius: 50%;
+	overflow: hidden;
+	transform: rotateZ(270deg);
+
+	&__link {
+		width: 45px;
+		height: 45px;
+		background: url('./icons/phone.svg') center / 70% no-repeat;
+	}
+
+	@include media-gte-sm {
+		display: none;
+	}
+}

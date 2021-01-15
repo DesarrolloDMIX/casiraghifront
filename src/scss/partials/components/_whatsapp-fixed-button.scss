@@ -1,0 +1,21 @@
+.whatsapp-fixed-button {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 20px;
+	right: 20px;
+	background-color: #33ad3b;
+	border-radius: 50%;
+	overflow: hidden;
+
+	&__link {
+		width: 45px;
+		height: 45px;
+		background: url('./icons/whatsapp-icon.png') center / 70% no-repeat;
+	}
+
+	@include media-gte-sm {
+		display: none;
+	}
+}

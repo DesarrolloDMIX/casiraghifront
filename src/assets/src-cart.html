@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap"
+		/>
+		<title>test</title>
+	</head>
+	<body>
+		<header>
+			<div class="nav__toggler__container">
+				<button class="nav__toggler icon icon--with-hover js-nav-toggler">
+					<svg
+						width="30px"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 100"
+					>
+						<line
+							x1="18"
+							x2="82"
+							y1="26"
+							y2="26"
+							stroke-linecap="round"
+							stroke-width="10px"
+							stroke="aqua"
+						/>
+						<line
+							x1="18"
+							x2="82"
+							y1="50"
+							y2="50"
+							stroke-linecap="round"
+							stroke-width="10px"
+							stroke="aqua"
+						/>
+						<line
+							x1="18"
+							x2="82"
+							y1="74"
+							y2="74"
+							stroke-linecap="round"
+							stroke-width="10px"
+							stroke="aqua"
+						/>
+					</svg>
+				</button>
+			</div>
+			<h1 class="brand">
+				<a href="#"
+					><img src="./icons/Home-43.png" alt="Casiraghi Express"
+				/></a>
+			</h1>
+			<nav class="js-nav">
+				<ul>
+					<li><a href="#">Quienes somos</a></li>
+					<li><a href="#">Productos</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+			<div class="controls">
+				<a href="#" class="icon icon--with-hover">
+					<img src="./icons/Home-39.png" alt="Carrito" />
+				</a>
+				<a href="#" class="icon icon--with-hover">
+					<img src="./icons/Home-40.png" alt="Perfil" />
+				</a>
+			</div>
+		</header>
+		<div class="cart-wrapper">
+			<section class="cart">
+				<div class="cart__list">
+					<div class="cart-item">
+						<div class="cart-item__column-img">
+							<div class="cart-item__img-container">
+								<img src="./images/x-61.png" class="cart-item__img" />
+							</div>
+						</div>
+						<div class="cart-item__column-details">
+							<div class="cart-item__title">
+								<span>Producto Lorem ipsum</span>
+							</div>
+							<div class="cart-item__qta">
+								<span>Cantidad:</span
+								><span class="cart-item__qta-number">5</span>
+							</div>
+							<div class="cart-item__delete-item-container">
+								<a class="cart-item__delete-item">Eliminar</a>
+							</div>
+							<div class="cart-item__price-container">
+								<div class="price price--with-iva price--with-cents">
+									<p class="price__price">
+										$<span class="price__fraction">257</span
+										><span class="price__cents">23</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart-item">
+						<div class="cart-item__column-img">
+							<div class="cart-item__img-container">
+								<img src="./images/x-61.png" class="cart-item__img" />
+							</div>
+						</div>
+						<div class="cart-item__column-details">
+							<div class="cart-item__title">
+								<span>Producto Lorem ipsum</span>
+							</div>
+							<div class="cart-item__qta">
+								<span>Cantidad:</span
+								><span class="cart-item__qta-number">5</span>
+							</div>
+							<div class="cart-item__delete-item-container">
+								<a class="cart-item__delete-item">Eliminar</a>
+							</div>
+
+							<div class="cart-item__price-container">
+								<div
+									class="price price--with-iva price--with-cents price--with-discounted-price"
+								>
+									<p class="price__price">
+										$<span class="price__fraction">257</span
+										><span class="price__cents">23</span>
+									</p>
+									<p class="price__discounted-price">
+										$<span class="price__fraction">257</span
+										><span class="price__cents">23</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart__bottom">
+					<div class="cart__summary">
+						<div class="summary-line">
+							<div class="summary-line__qta">
+								<span class="number-products-in-car">5</span
+								><span>productos</span>
+							</div>
+							<div class="summary-line__price-container">
+								<span>Total:</span>
+								<div class="price price--with-cents">
+									<p class="price__price">
+										$<span class="price__fraction">257</span
+										><span class="price__cents">23</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__actions">
+						<button type="button" class="cta-button">
+							Continuar compra
+						</button>
+					</div>
+				</div>
+				<div class="cart__no-items-message">
+					<h3>Todavía no hay ningún producto en tu carrito!</h3>
+					<p>
+						Buscá en nuestro
+						<a href="#" class="link-to-products">catálogo de productos</a>
+					</p>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="separator">
+				<img src="./images/cariraghi-icon-white.png" alt="Casiraghi" />
+			</div>
+			<div class="footer-map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28635.185609066106!2d-58.401893308936955!3d-34.64655267912907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb6cace36833%3A0x42d2d1a01b0c516f!2sLavard%C3%A9n%20519%2C%20C1437%20CABA!5e0!3m2!1sen!2sar!4v1590180572326!5m2!1sen!2sar"
+					frameborder="0"
+					style="border: 0;"
+					allowfullscreen=""
+					aria-hidden="false"
+				></iframe>
+				<div class="under-footer-map">
+					<h4>Dirección</h4>
+					<p>Lavardén 519, Ciudad Autónoma de Buenos Aires</p>
+					<h4>Horario de atención</h4>
+					<p>8:00- 17:00hs de Lunes - Viernes</p>
+				</div>
+			</div>
+			<form class="contact-form js-contact-form" action="">
+				<div class="contact-form__field-set js-contact-form__field-set">
+					<label class="field" for="comment">Dejanos tu consulta:</label>
+					<textarea
+						required
+						name="comment"
+						class="js-contact-form__text-input"
+						id="comment"
+						cols="30"
+						rows="6"
+					></textarea>
+					<label for="email"
+						>¿A qué dirección de email deberíamos responderte?</label
+					>
+					<input
+						required
+						type="email"
+						class="js-contact-form__email-input"
+						name="email"
+						id="email"
+					/>
+					<button
+						type="submit"
+						class="button-secondary color js-contact-form__submit-button"
+					>
+						Enviar!
+					</button>
+				</div>
+				<div class="contact-form__sent-screen js-contact-form_sent-screen">
+					<div class="contact-form__sent-message">
+						<h3>¡Gracias por contactarnos!</h3>
+						<p>En breve tendrás una respuesta</p>
+					</div>
+				</div>
+			</form>
+			<div class="phones-list">
+				<div class="phone-special">
+					<p class="phone-special__label">WhatsApp</p>
+					<p class="phone-special__number">1135506371</p>
+				</div>
+				<p>Atención a empresas 11-4308-0334</p>
+				<p>Venta minorista 11-4308-0212</p>
+				<p>Conmutador 11-4308-0330</p>
+				<p>Fax 11-4308-5381</p>
+				<p>e-mail ventas@casiraghi.com.ar</p>
+			</div>
+			<div class="water-mark">
+				<img src="./images/water-mark.png" alt="Casiraghi hermanos" />
+			</div>
+			<div class="footer-bottom">
+				<p>
+					Lavarden 519, Ciudad Autónoma de Buenos Aires
+				</p>
+				<p>8:00 - 17:00hs de Lunes a Viernes</p>
+			</div>
+		</footer>
+	</body>
+</html>

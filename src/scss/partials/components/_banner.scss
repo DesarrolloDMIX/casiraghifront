@@ -1,0 +1,223 @@
+.banner {
+	margin: $sideSpace-sm;
+	padding: 10px;
+	background: linear-gradient(
+			to bottom,
+			transparentize($darkAccent, 0.5),
+			transparentize($darkAccent, 0.5)
+		),
+		url('./images/Home-11.png') center / cover;
+	background-color: $darkBg;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+
+	p {
+		font-size: 0.8rem;
+		margin-top: 0;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+}
+
+.banner-info {
+	background: url('./images/footer back.jpg') center / cover;
+	@include flexAlignCenter($dir: column);
+	text-align: center;
+
+	&__img-container {
+		display: none;
+	}
+}
+
+.banner--is-title {
+	text-align: center;
+	padding: 5px 0;
+	background: linear-gradient(
+			to top,
+			transparentize($darkAccent, 0.3) 50%,
+			rgba(0, 0, 0, 0)
+		),
+		url('./images/perfiles-conformados-bg.png') center / cover;
+
+	@include media-gte-sm {
+		font-size: 1.5rem;
+	}
+}
+
+.banner-main__promo {
+	font-size: 1.1rem;
+	margin-top: 10px;
+	border-radius: 5px;
+
+	.payment-logo--pos_bco-nacion {
+		display: none;
+	}
+	.payment-logo--pos_visa-debito {
+		display: none;
+	}
+	.payment-logo--pos_mastercard-debito {
+		display: none;
+	}
+	.payment-logo--pos_bco-provincia {
+		display: none;
+	}
+	.payment-logo--pos_bco-galicia {
+		display: none;
+	}
+
+	a {
+		@include transition03;
+		color: $primaryColor;
+		font-weight: 500;
+		padding-right: 40px;
+		position: relative;
+		display: block;
+		margin-top: 15px;
+
+		&:hover {
+			color: $darkBg;
+		}
+
+		&:hover::after {
+			box-shadow: 0 0 6px $primaryColor;
+		}
+	}
+}
+
+.banner-main {
+	&__slogan {
+		@include flexAlignCenter(
+			$dir: column,
+			$justifyContent: flex-end,
+			$align: flex-start
+		);
+	}
+	&__svg-container {
+		width: 50%;
+	}
+	svg text {
+		fill: $textColor;
+	}
+
+	@include media-gte-lg {
+		@include flexAlignCenter($align: stretch, $justifyContent: space-between);
+
+		&__slogan {
+			width: 50%;
+		}
+		p {
+			font-size: 1rem;
+		}
+		&__svg-container {
+			width: auto;
+			max-width: 450px;
+			margin-right: 20px;
+		}
+	}
+}
+
+@include media-gte-sm {
+	.banner {
+		margin: 5px $sideSpace-md;
+
+		&__promo-bottom {
+			padding: 20px 35px;
+		}
+	}
+}
+
+@include media-gte-lg {
+	.banner {
+		margin: $sideSpace-md;
+		margin-bottom: 10px;
+		padding: 20px;
+	}
+
+	.banner.banner-info {
+		margin: 0;
+		border-radius: none;
+		background: url('./images/banner-info-bg-lg.jpg') top / cover;
+		color: $darkBg;
+		flex-direction: row;
+		align-items: stretch;
+		padding: 30px 60px;
+		text-align: left;
+
+		> * {
+			flex: 1;
+		}
+		.banner-info__content {
+			@include flexAlignCenter($dir: column, $align: stretch);
+		}
+		.banner-info__img-container {
+			display: block;
+
+			.banner-info__img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.banner-main__promo {
+		background-color: $textColor;
+		color: $darkBg;
+		margin-top: 0;
+		padding: 20px 15px;
+
+		.payment-logo--pos_bco-nacion {
+			display: initial;
+		}
+		.payment-logo--pos_visa-debito {
+			display: initial;
+		}
+		.payment-logo--pos_mastercard-debito {
+			display: initial;
+		}
+		.payment-logo--pos_bco-provincia {
+			display: initial;
+		}
+		.payment-logo--pos_bco-galicia {
+			display: initial;
+		}
+
+		a {
+			@include transition03;
+			color: $primaryColor;
+			font-weight: 500;
+			padding-right: 40px;
+			position: relative;
+			display: block;
+			margin-top: 15px;
+
+			&:hover {
+				color: $darkBg;
+			}
+
+			&:hover::after {
+				box-shadow: 0 0 6px $primaryColor;
+			}
+
+			&::after {
+				@include transition03;
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				padding: 5px;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				box-shadow: 0 0 3px $darkAccent;
+				background-image: url('./icons/credit-card.svg');
+				background-size: 80%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

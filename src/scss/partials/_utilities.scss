@@ -1,0 +1,40 @@
+$custom-utilities: (
+  "height": (
+    property: height,
+    class: h,
+    responsive: true,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    ),
+  ),
+  "width": (
+    property: width,
+    responsive: true,
+    class: w,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    ),
+  ),
+  "shadow": (
+    property: box-shadow,
+    responsive: false,
+    class: shadow,
+    values: (
+      3: 1px 1px 3px #7c7c7c,
+      5: 1px 1px 5px #7c7c7c,
+    ),
+  ),
+);
+
+$utilities: map-merge(
+    $utilities,
+    $custom-utilities
+)

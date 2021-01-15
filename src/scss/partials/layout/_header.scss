@@ -1,0 +1,66 @@
+body {
+	padding-top: $headerHeight-sm;
+
+	@include media-gte-sm {
+		padding-top: $headerHeight-md;
+	}
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include smallShadow;
+	padding: $sideSpace-sm;
+	height: $headerHeight-sm;
+	z-index: 1000;
+	background-color: white;
+
+	.brand {
+		height: 40px;
+		line-height: 0;
+		a {
+			display: inline-block;
+			height: 100%;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.controls {
+		display: flex;
+		align-items: center;
+		width: 25%;
+		justify-content: flex-end;
+
+		a {
+			margin-left: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	@include media-gte-sm {
+		padding: 5px $sideSpace-md;
+		height: $headerHeight-md;
+
+		.controls a {
+			margin-left: 30px;
+		}
+	}
+
+	@include media-gte-lg {
+		.controls {
+			width: auto;
+		}
+	}
+}

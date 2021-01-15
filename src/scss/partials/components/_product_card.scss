@@ -1,0 +1,177 @@
+.product-card {
+	@include flexAlignCenter($dir: column);
+	background-color: $darkBg;
+	border: 2px solid $darkBg;
+	border-radius: 5px;
+	overflow: hidden;
+
+	&__title {
+		margin: 5px;
+		font-size: 1.5rem;
+		background-color: $primaryColor;
+		font-weight: 700;
+	}
+
+	&__img-container {
+		position: relative;
+		background-color: white;
+		padding: 10px 60px 40px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__img-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to top, $lightGrey, transparent 25%);
+	}
+
+	&__img-selector {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 5px;
+		z-index: 90;
+		background-color: white;
+		box-shadow: 2px 2px 5px transparentize($color: black, $amount: 0.7);
+	}
+	&__img-selector-prev {
+		left: 2%;
+		transform: translateY(-50%) rotateZ(180deg);
+		box-shadow: -2px -2px 5px transparentize($color: black, $amount: 0.7);
+	}
+	&__img-selector-next {
+		right: 2%;
+	}
+
+	&__colors-list {
+		@include flexAlignCenter;
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 5px;
+		border-radius: 5px;
+		border: 3px solid transparent;
+
+		li {
+			background-color: $textColor;
+			border: 2px solid $darkBg;
+			border-radius: 50%;
+			padding: 5px;
+			margin: 0 5px;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $primaryColor;
+			}
+			&.is-active {
+				border-color: $primaryColor;
+			}
+			@include media-gte-lg {
+				padding: 6.5px;
+				border: 3px solid $darkBg;
+			}
+		}
+		&.input-error {
+			border-color: $errorColor;
+			background-color: $textColor;
+		}
+		.error-message {
+			@include transition03;
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			bottom: 90%;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $textColor;
+			color: $darkBg;
+			padding: 5px;
+			border-radius: 5px;
+			border: 3px solid $errorColor;
+			width: 100%;
+			text-align: center;
+		}
+		&.input-error .error-message {
+			visibility: visible;
+			bottom: 120%;
+			opacity: 1;
+		}
+	}
+
+	&__bottom {
+		@include flexAlignCenter;
+		position: relative;
+		background-color: $textColor;
+		padding: 15px 10px;
+
+		.product-card__price-container {
+			flex: 2;
+			padding-right: 5px;
+
+			.price {
+				font-size: 2rem;
+				margin: 0;
+			}
+		}
+		.product-card__controls {
+			@include flexAlignCenter($dir: column);
+			flex: 3;
+
+			.input-field {
+				@include flexAlignCenter;
+				color: $darkBg;
+
+				label {
+					font-weight: 500;
+				}
+				input {
+					border: 1px solid $midGrey;
+					border-radius: 5px;
+					color: inherit;
+					background-color: $textColor;
+					font-size: 1rem;
+					padding: 5px;
+					margin: 0;
+					margin-left: 5px;
+					text-align: center;
+				}
+				input.input-error {
+					border-color: $errorColor;
+				}
+			}
+
+			> .cta-button {
+				font-size: 0.9rem;
+				margin-top: 5px;
+			}
+		}
+	}
+
+	&__added-to-cart-screen {
+		@include transition03;
+		position: absolute;
+		bottom: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 15px;
+		background-color: $textColor;
+		color: $darkBg;
+		border: 2px solid $primaryColor;
+		font-size: 1.3rem;
+		border-radius: 5px;
+		visibility: hidden;
+		opacity: 0;
+
+		.product-card__bottom--added-to-cart & {
+			visibility: visible;
+			opacity: 1;
+			bottom: 120%;
+		}
+	}
+}

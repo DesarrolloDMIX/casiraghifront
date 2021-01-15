@@ -1,0 +1,34 @@
+.slide-shipping {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	background: linear-gradient(
+			to top,
+			transparentize($darkAccent, 0.5),
+			transparentize($darkAccent, 0.5)
+		),
+		url('./images/Home-11.png') center / cover;
+	width: 100%;
+	text-align: left;
+
+	&__img {
+		width: auto;
+
+		> * {
+			fill: $textColor;
+		}
+	}
+
+	@include media-gte-sm {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		&__img {
+			width: 30%;
+			height: auto;
+			margin-right: 5%;
+		}
+	}
+}

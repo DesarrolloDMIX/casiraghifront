@@ -1,0 +1,24 @@
+.phones-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: auto;
+	color: $midGrey;
+	padding: 3px;
+	padding-bottom: 20px;
+
+	> * {
+		margin: 0;
+		margin-bottom: 5px;
+		margin-right: 10px;
+		padding: 3px;
+		padding-right: 0;
+		border-left: 1px solid $darkAccent;
+		box-shadow: -1px 0 1px -1px $textColor;
+	}
+
+	&__title {
+		font-size: 1.3rem;
+		color: white;
+	}
+}

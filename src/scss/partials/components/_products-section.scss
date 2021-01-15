@@ -1,0 +1,18 @@
+.products-section {
+    @include media-gte-lg {
+        display: flex;
+
+        & .products-filter-options {
+            flex-basis: 25%;
+            flex-shrink: 0;
+        }
+
+        & .products-list {
+            // flex-basis: 75%;
+            flex-basis: auto;
+            width: 100%;
+            // flex-grow: 1;
+            // flex-shrink: 0;
+        }
+    }
+}

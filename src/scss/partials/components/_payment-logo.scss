@@ -1,0 +1,94 @@
+.payment-logo {
+	display: inline-block;
+	border-radius: 5px;
+	background-image: url('https://http2.mlstatic.com/secure/payment-logos/v2/payment-logos-mla-flag2x_v_a4306bc224.png');
+	background-color: $darkBg;
+	background-size: cover;
+	width: 90px;
+	height: 45px;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px -1px transparentize($darkAccent, 0.5);
+
+	&--pos_visa {
+		$pos: 46.12 * 20;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_visa-debito {
+		$pos: 46.12 * 56;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_mastercard {
+		$pos: 46.125 * 57;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_mastercard-debito {
+		$pos: 46.125 * 55;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_bco-nacion {
+		$pos: 46.14 * 3;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_bco-provincia {
+		$pos: 46.13 * 31;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_bco-galicia {
+		$pos: 46.13 * 26;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_ahora12-18 {
+		$pos: 46.125 * 65;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_cabal {
+		$pos: 46.12 * 16;
+		background-position: left -#{$pos}px;
+	}
+	&--pos_american-express {
+		$pos: 46.12 * 1;
+		background-position: left -#{$pos}px;
+	}
+
+	&--small {
+		width: 50px;
+		height: 25px;
+
+		@at-root &.payment-logo--pos_visa {
+			$pos: 25.63 * 20;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_visa-debito {
+			$pos: 25.625 * 56;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_mastercard {
+			$pos: 25.625 * 57;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_mastercard-debito {
+			$pos: 25.625 * 55;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_bco-nacion {
+			$pos: 25.14 * 3;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_bco-provincia {
+			$pos: 25.13 * 31;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_bco-galicia {
+			$pos: 25.13 * 26;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_cabal {
+			$pos: 25.63 * 16;
+			background-position: left -#{$pos}px;
+		}
+		@at-root &.payment-logo--pos_american-express {
+			$pos: 25.63 * 1;
+			background-position: left -#{$pos}px;
+		}
+	}
+}

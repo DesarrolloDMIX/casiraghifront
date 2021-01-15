@@ -1,0 +1,156 @@
+.product-with-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 15px 30px;
+	max-width: 1200px;
+	@media screen and (min-width: 500px) {
+		padding: 15px calc(((100vw - 500px) + 30px) / 2);
+	}
+	overflow: hidden;
+	background: linear-gradient(to bottom, $lightGrey, rgba(0, 0, 0, 0) 5%),
+		url('./images/lightbg.jpg') center / cover no-repeat;
+	background-color: $lightGrey;
+
+	&__title {
+		grid-column: 1 / -1;
+		border-radius: 5px 5px 0 0;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+		width: 100%;
+		margin: 0;
+		margin-bottom: -1px;
+		padding: 5px;
+		text-align: center;
+	}
+	&__img-container {
+		grid-column: 1 / -1;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+		border-bottom: none;
+		margin-bottom: -1px;
+	}
+	&__controls-container {
+		grid-column: 1 / -1;
+		border-radius: 0 0 5px 5px;
+		text-align: center;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+	}
+	&__details {
+		grid-column: 1/ -1;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+		border-bottom: 2px solid $lightGrey;
+	}
+	&__img-selector-list {
+		display: none;
+	}
+	&__promo {
+		grid-column: 1 / -1;
+		background-color: $textColor;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+		border-radius: 5px;
+		color: $darkBg;
+		padding: 5px;
+		margin-top: 10px;
+		text-align: center;
+
+		> * {
+			margin: 5px;
+		}
+	}
+	&__benefits {
+		grid-column: 1 / -1;
+		margin-top: 10px;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+
+		& .benefits-list__item {
+			border-bottom: 1px solid $midGrey;
+			font-size: 0.8rem;
+		}
+	}
+
+	@include media-gte-sm {
+		margin: 5px $sideSpace-md;
+
+		&__benefits {
+			& .benefits-list__item {
+				margin: 0;
+				border-radius: 0;
+			}
+		}
+	}
+
+	@include media-gte-lg {
+		padding: 60px;
+		grid-template-columns: 1fr 100px 1fr;
+		grid-template-rows: auto auto auto auto;
+		margin: 5px calc((100vw - 1030px) / 2 + 5px);
+
+		&__img-container {
+			grid-column: 1 / 2;
+			grid-row: 1 / -1;
+			border-radius: 5px;
+			border: 2px solid $textColor;
+			overflow: hidden;
+		}
+		&__img-selector-list {
+			display: block;
+			grid-column: 2 / 3;
+			grid-row: 1 / -1;
+			padding: 0 10px;
+			@include flexAlignCenter($dir: column);
+
+			img {
+				margin: 10px 0;
+				border: 2px solid $textColor;
+				border-radius: 5px;
+				cursor: pointer;
+
+				&:hover {
+					border-color: $primaryColor;
+					border-width: 3px;
+				}
+
+				&.is-active {
+					border-color: $primaryColor;
+					border-width: 3px;
+				}
+			}
+		}
+		&__title {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+
+		&__details {
+			grid-column: 3 / 4;
+			grid-row: 2 / 4;
+			margin-top: 0;
+			border-radius: 0;
+		}
+		&__controls-container {
+			grid-column: 3 / 4;
+			grid-row: 4 / 5;
+		}
+		&__promo {
+			grid-column: 1 / -1;
+			background-color: $textColor;
+			box-shadow: 1px 1px 2px transparentize($darkAccent, 0.5);
+			border-radius: 5px;
+			color: $darkBg;
+			padding: 5px;
+			margin-top: 10px;
+
+			> * {
+				margin: 5px;
+			}
+		}
+		&__benefits {
+			& .benefits-list__item {
+				font-size: 0.8rem;
+			}
+		}
+	}
+}

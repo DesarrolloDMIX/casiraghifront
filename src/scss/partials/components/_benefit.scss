@@ -1,0 +1,35 @@
+.benefit {
+	@include flexAlignCenter;
+	padding: 5px;
+
+	color: $darkBg;
+	font-weight: 500;
+
+	&__icon {
+		margin-right: 10px;
+	}
+	&__text {
+		display: inline-block;
+		width: 300px;
+		text-align: center;
+	}
+
+	&--dark {
+		background-color: $darkBg;
+		color: $textColor;
+	}
+
+	@include media-gte-sm {
+		&__icon {
+			width: 60px;
+		}
+		&__text {
+			text-align: left;
+			width: auto;
+		}
+	}
+
+	&__flex {
+		flex: 1;
+	}
+}

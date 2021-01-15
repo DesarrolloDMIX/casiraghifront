@@ -1,0 +1,89 @@
+// bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import '../../node_modules/bootstrap/scss/utilities';
+
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/alert';
+
+//custom utilities
+@import './partials/utilities';
+
+// utilities api
+@import '../../node_modules/bootstrap/scss/utilities/api';
+
+@import './partials/basics/bs-overrides';
+
+// sass
+@import './partials/helpers/variables';
+@import './partials/helpers/mixins';
+
+// basics
+@import './partials/basics/base';
+@import './partials/basics/resets';
+@import './partials/basics/utilities';
+@import './partials/basics/media_hide';
+
+// layout
+@import './partials/layout/header';
+@import './partials/layout/nav';
+@import './partials/layout/categories_main';
+
+//components
+@import './partials/components/phones_list';
+@import './partials/components/link';
+@import './partials/components/heading';
+@import './partials/components/section-header';
+@import './partials/components/icon';
+@import './partials/components/panel';
+@import './partials/components/thankyou';
+@import './partials/components/water_mark';
+@import './partials/components/fixed-whatsapp';
+@import './partials/components/dark-box';
+@import './partials/components/crystal-box';
+@import './partials/components/whatsapp-fixed-button';
+@import './partials/components/phone-fixed-button';
+@import './partials/components/banner';
+@import './partials/components/banner-category';
+@import './partials/components/flex-row';
+@import './partials/components/flex_item';
+@import './partials/components/carousel';
+@import './partials/components/card';
+@import './partials/components/ctabutton';
+@import './partials/components/categorie_main';
+@import './partials/components/button_secondary';
+@import './partials/components/separator';
+@import './partials/components/contact_form';
+@import './partials/components/price';
+@import './partials/components/product';
+@import './partials/components/product_card';
+@import './partials/components/product_details';
+@import './partials/components/product_with_details';
+@import './partials/components/advice_button_container';
+@import './partials/components/graph_list';
+@import './partials/components/graph';
+@import './partials/components/features_list';
+@import './partials/components/feature';
+@import './partials/components/phone_special';
+@import './partials/components/products_list';
+@import './partials/components/cards-list';
+@import './partials/components/cart';
+@import './partials/components/cart_item';
+@import './partials/components/checkout_form';
+@import './partials/components/payment-logo';
+@import './partials/components/payment-logo-list';
+@import './partials/components/section_container';
+@import './partials/components/benefits_list';
+@import './partials/components/benefit';
+@import './partials/components/notice';
+@import './partials/components/slider';
+@import './partials/components/products-section';
+@import './partials/components/products-filter-options';
+@import './partials/components/rubro-grid';
+@import './partials/components/rubro-list';
+@import './partials/components/cart-button';
+@import './partials/components/multistep_form';
+@import './partials/layout/footer';

@@ -1,0 +1,22 @@
+.slide-steel-profiles {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	background: linear-gradient(
+			to top,
+			transparentize(black, 0.2),
+			transparentize(#002d29, 0.2) 40%
+		),
+		url('./images/steel-profiles-back.jpg') center / cover;
+	width: 100%;
+	text-align: left;
+
+	&__heading {
+		font-size: 40px;
+	}
+
+	&__button {
+		margin-top: 20px;
+	}
+}

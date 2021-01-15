@@ -1,0 +1,13 @@
+.icon {
+	width: 40px;
+	line-height: 0;
+	border-radius: 5px;
+
+	&--with-hover:hover {
+		box-shadow: 0 0 20px transparentize($primaryColor, 0.5) inset;
+	}
+
+	@include media-gte-sm {
+		padding: 5px;
+	}
+}

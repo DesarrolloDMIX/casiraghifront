@@ -1,0 +1,21 @@
+.section-container {
+	padding: 5px $sideSpace-sm;
+
+	&--full-width {
+		padding: 5px 0px;
+	}
+
+	&--max-width {
+		max-width: 1024px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include media-gte-sm {
+		padding: 5px $sideSpace-md;
+
+		&--full-width {
+			padding: 5px 0px;
+		}
+	}
+}
