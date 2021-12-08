@@ -5,6 +5,24 @@ import App from './app'
 import addProductToCart from "./utilities/addProductToCart";
 import { navBarCart } from "./utilities/navBarCart";
 
+function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+    try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+        const negativeSign = amount < 0 ? "-" : "";
+
+        let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        let j = (i.length > 3) ? i.length % 3 : 0;
+
+        return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+    } catch (e) {
+        console.log(e)
+    }
+};
+
+window.dmixFormatMoney = formatMoney;
+
 const app = new App()
 
 app.init()
@@ -23,6 +41,7 @@ addToCartButtons.forEach(button => {
             quantity: qtyInput.value,
             fraction: evt.target.dataset.fraction,
             cents: evt.target.dataset.cents,
+            name: evt.target.dataset.productName,
         }
 
         let resultPromise = addProductToCart(product);
@@ -54,7 +73,7 @@ addToCartButtons.forEach(button => {
 
 let addToCartNumberInputs = Array.from(document.querySelectorAll('.js-product-card__qty-input'));
 let preventInputNegativeNumber = (e) => {
-    e.target.value = !!e.target.value && Math.abs(e.target.value) >= 0 ? Math.abs(e.target.value) : 1
+    e.target.value = !!e.target.value && Math.abs(e.target.value) >= 0 ? Math.abs(e.target.value) : 0
 }
 
 addToCartNumberInputs.forEach(input => {

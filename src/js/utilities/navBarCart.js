@@ -33,6 +33,7 @@ export const navBarCart = {
 
             pubsub.subscribe('productAddedToCart', navBarCart.showNotice);
             pubsub.subscribe('productAddedToCart', navBarCart.updatePrice);
+            pubsub.subscribe('cartAmountChanged', navBarCart.updatePrice);
         }
     }
 }

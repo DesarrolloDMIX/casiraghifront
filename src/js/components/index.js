@@ -6,6 +6,9 @@ import Slider from './Slider'
 import Footer from './Footer'
 import MultistepForm from './MultistepForm'
 import ImageLazyLoader from './ImageLazyLoader'
+import CartItem from './CartItem'
+import Cart from './Cart'
+import ProductsFilter from './ProductsFilter'
 
 export default [
 	NavToggler,
@@ -15,5 +18,8 @@ export default [
 	Slider,
 	Footer,
 	MultistepForm,
-	ImageLazyLoader
+	ImageLazyLoader,
+	CartItem,
+	Cart,
+	ProductsFilter,
 ]

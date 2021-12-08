@@ -105,37 +105,43 @@ let ProductCard = function (element) {
 
 	this.handleAddToCart = evt => {
 
+		if (parseInt(this.qtyInput.value) == 0) {
+			return;
+		}
 		this.addToCartButton.removeEventListener('click', this.handleAddToCart)
 
 		let product = {
 			id: this.addToCartButton.dataset.productId,
 			quantity: this.qtyInput.value,
 			fraction: this.addToCartButton.dataset.fraction,
-			cents: this.addToCartButton.dataset.cents
+			cents: this.addToCartButton.dataset.cents,
+			name: this.addToCartButton.dataset.productName,
 		}
 
-		let result = addProductToCart(product);
+		let resultPromise = addProductToCart(product);
 
-		if (!result.success) {
-			if (result.error == 'invalid quantity') {
-				this.qtyInput.classList.add('input-error');
+		resultPromise.then((result) => {
+			if (!result.success) {
+				if (result.error == 'invalid quantity') {
+					this.qtyInput.classList.add('input-error');
+				} else {
+					this.qtyInput.classList.remove('input-error');
+				}
+
+				if (result.error == '') {
+					this.cardBottom.classList.add('product-card__bottom--error');
+				} else {
+					this.cardBottom.classList.remove('product-card__bottom--error');
+				}
 			} else {
-				this.qtyInput.classList.remove('input-error');
+				this.cardBottom.classList.add('product-card__bottom--added-to-cart');
 			}
 
-			if (result.error == '') {
-				this.cardBottom.classList.add('product-card__bottom--error');
-			} else {
-				this.cardBottom.classList.remove('product-card__bottom--error');
-			}
-		} else {
-			this.cardBottom.classList.add('product-card__bottom--added-to-cart');
-		}
-
-		setTimeout(() => {
-			this.cardBottom.classList.remove('product-card__bottom--added-to-cart')
-			this.addToCartButton.addEventListener('click', this.handleAddToCart)
-		}, 2000)
+			setTimeout(() => {
+				this.cardBottom.classList.remove('product-card__bottom--added-to-cart')
+				this.addToCartButton.addEventListener('click', this.handleAddToCart)
+			}, 2000)
+		});
 	}
 
 	this.handleFinishShopping = e => {
