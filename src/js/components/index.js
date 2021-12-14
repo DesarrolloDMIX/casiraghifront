@@ -9,6 +9,7 @@ import ImageLazyLoader from './ImageLazyLoader'
 import CartItem from './CartItem'
 import Cart from './Cart'
 import ProductsFilter from './ProductsFilter'
+import GoogleReviews from './GoogleReviews'
 
 export default [
 	NavToggler,
@@ -22,4 +23,5 @@ export default [
 	CartItem,
 	Cart,
 	ProductsFilter,
+	GoogleReviews,
 ]
