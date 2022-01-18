@@ -29,46 +29,48 @@ app.init()
 
 let addToCartButtons = Array.from(document.querySelectorAll('.js-add-to-cart-button'));
 
-addToCartButtons.forEach(button => {
-    button.onclick = function handleAddToCart(evt) {
+function handleAddToCart(evt) {
 
-        evt.target.onclick = null;
+    evt.target.onclick = null;
 
-        let qtyInput = evt.target.nextElementSibling;
+    let qtyInput = evt.target.nextElementSibling;
 
-        let product = {
-            id: evt.target.dataset.productId,
-            quantity: qtyInput.value,
-            fraction: evt.target.dataset.fraction,
-            cents: evt.target.dataset.cents,
-            name: evt.target.dataset.productName,
-        }
-
-        let resultPromise = addProductToCart(product);
-
-        resultPromise.then((result) => {
-            if (!result.success) {
-                if (result.error == 'invalid quantity') {
-                    qtyInput.classList.add('input-error');
-                } else {
-                    qtyInput.classList.remove('input-error');
-                }
-
-                if (result.error == '') {
-                    evt.target.parentElement.classList.add('error');
-                } else {
-                    evt.target.parentElement.classList.remove('error');
-                }
-            } else {
-                evt.target.parentElement.classList.add('success');
-            }
-        })
-
-        setTimeout(() => {
-            evt.target.parentElement.classList.remove('success')
-            evt.target.onclick = handleAddToCart
-        }, 2000)
+    let product = {
+        id: evt.target.dataset.productId,
+        quantity: qtyInput.value,
+        fraction: evt.target.dataset.fraction,
+        cents: evt.target.dataset.cents,
+        name: evt.target.dataset.productName,
     }
+
+    let resultPromise = addProductToCart(product);
+
+    resultPromise.then((result) => {
+        if (!result.success) {
+            if (result.error == 'invalid quantity') {
+                qtyInput.classList.add('input-error');
+            } else {
+                qtyInput.classList.remove('input-error');
+            }
+
+            if (result.error == '') {
+                evt.target.parentElement.classList.add('error');
+            } else {
+                evt.target.parentElement.classList.remove('error');
+            }
+        } else {
+            evt.target.parentElement.classList.add('success');
+        }
+    })
+
+    setTimeout(() => {
+        evt.target.parentElement.classList.remove('success')
+        evt.target.onclick = handleAddToCart
+    }, 2000)
+}
+
+addToCartButtons.forEach(button => {
+    button.onclick = handleAddToCart
 });
 
 let addToCartNumberInputs = Array.from(document.querySelectorAll('.js-product-card__qty-input'));
