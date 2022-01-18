@@ -62,16 +62,16 @@ const GoogleReviews = function (element) {
 
                         <div class="card-review-header" >
                             <div class="card-info">
-                                <p class="review-img"> <img src='${review.profile_photo_url}' referrerpolicy="no-referrer"/>                       </p> 
+                                <div class="review-img"> <img src='${review.profile_photo_url}' referrerpolicy="no-referrer"/> </div> 
                                 <p class="review-name"> ${review.author_name}                                         </p>
                             </div>
                             <div class="rating-container">
-                                <p class="review-rating" > ${starsRating}                                </p> 
+                                <div class="review-rating" > ${starsRating}                                </div> 
                             </div>
                         </div>
 
                         <div class="card-review-body"> 
-                            <span class="review-text" > ${review.text.length > 220 ? review.text.slice(0, 220) + '...' : review.text}                                                </span> 
+                            <span class="review-text" > ${review.text.length > 150 ? review.text.slice(0, 150) + '...' : review.text}                                                </span> 
                         </div>
 
                         <div class="card-review-footer">
