@@ -3,7 +3,24 @@
     overflow: hidden;
     position: relative;
     color: black;
-    background-color:hsl(0, 0%, 95%);
+    background-image: linear-gradient(to bottom, #cecece,rgba(0,0,0,0)5%),url(https://express.casiraghi.com.ar/imgs/9754cd420aca7b2fa5f51ac10820e049.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.review {
+    position: relative;
+}
+.card-review-overlay-link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.card-review-overlay-link:focus{
+ outline: none;
+ box-shadow: none;
 }
 
 .header-container{
@@ -11,21 +28,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 3em;
-
-}
-.google-reviews-background-1, .google-reviews-background-2{
-    position: absolute;
-    z-index: 0;
-}
-.google-reviews-background-1{
-    top: 0;
-    left: 13%;
-    transform: translateY(-50%);
-}
-.google-reviews-background-2{
-    bottom: 0;
-    right: 13%;
-    transform: translateY(50%);
 }
 
 .total-rating-stars > svg {
@@ -60,13 +62,13 @@
     font-size: 20px;
     padding: 10px 35px;
     border-radius: 100px;
-    background-color: hsl(96, 66%, 42%)
+    background-color: hsl(176, 44%, 49%);
 }
 
 .reviews_google {
     padding-left: 7px;
     font-weight: 600;
-    color: hsl(105, 91%, 26%);
+    color: hsl(176, 44%, 29%);
 }
 
 .google-recommendation {
@@ -82,11 +84,11 @@
         /* IE and Edge */
     scrollbar-width: none;
         /* Firefox */
-    padding: 0 100px;
-    padding-bottom: 16px;
+    padding: 0 110px;
+    padding-bottom: 34px;
     display: flex;
     overflow-x: scroll;
-    scroll-padding: 100px;
+    scroll-padding: 110px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
@@ -99,7 +101,7 @@
     padding: 1rem;
     background-color: white;
     border-radius: 32px;
-    margin: 0rem 24px;
+    margin: 0rem 116px;
     width: 405px;
     max-width: calc(100vw - (200px + 1em));
     height: 200px;
@@ -155,18 +157,13 @@
 
 .btn-review-author_url {
     text-align: center;
-    width: 100px;
-    background-color: hsl(96, 66%, 42%);
+    background-color: #46b6ae;
     color: white;
     border: none;
-    border-radius: .75em;
+    border-radius: 1000px;
     font-size: .90rem;
-    padding: 0.2em 0.3em;
+    padding: 8px 24px;
     cursor: pointer;
-}
-
-.btn-review-author_url:hover, .btn-review-author_url:focus {
-    background-color: hsl(96, 66%, 50%);
 }
 
 .review-author_url {
@@ -185,6 +182,7 @@
 }
 
 .arrow-container-left, .arrow-container-right {
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,6 +209,7 @@
     height: 25px;
     border-top: solid 3px black;
     border-right: solid 3px black;
+    pointer-events: none;
 }
 
 .arrow-container.left {
@@ -219,6 +218,19 @@
 
 .arrow-container.right{
     transform: translateX(-30%) rotate(45deg);
+}
+@media (min-width: 1024px){
+    .card-review {
+        margin: 0rem 4.2vw;
+        width: 390px;
+    }
+    .starRating{
+        width: 14px;
+        color: hsl(0, 0%, 50%);
+    }
+    .google-recommendation{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 900px){
@@ -266,7 +278,7 @@
     .card-review {
         height: auto;
         min-height: 100%;
-        max-width: calc(100vw - (130px + 1.2em));
+        max-width: calc(100vw - (130px));
     }
 
     .card-review-header {
@@ -297,5 +309,34 @@
     }
 }
 @media (max-width: 512px) {
-    
+    .card-review {
+        margin: 0rem 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .reviews{
+        padding: 0 55px;
+        scroll-padding: 55px;
+    }
+    .card-review{
+        max-width: calc(100vw - (112px));
+    }
+    .arrow-container.left, .arrow-container.right{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container{
+        padding: 0;
+    }
+    .total-rating {
+        padding: 0;
+        justify-content: center;
+    }
+    .google-recommendation {
+        font-size: 16px;
+    }
 }
