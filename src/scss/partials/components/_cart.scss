@@ -1,85 +1,85 @@
 .cart-wrapper {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .cart {
-	margin: 5px;
-	border-radius: 5px;
-	background-color: $textColor;
-	box-shadow: 0 0 50px transparentize($darkAccent, 0.8) inset,
-		0 0 10px -5px $darkBg;
-	overflow: hidden;
-	color: $darkBg;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: $textColor;
+  box-shadow: 0 0 50px transparentize($darkAccent, 0.8) inset,
+    0 0 10px -5px $darkBg;
+  overflow: hidden;
+  color: $darkBg;
 
-	&__bottom {
-		background-color: white;
-		padding: 15px 5px;
-	}
-	&__summary {
-		position: relative;
-		padding-bottom: 5px;
-	}
-	&__summary::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		background-image: linear-gradient(
-			to right,
-			transparent,
-			$midGrey,
-			transparent
-		);
-		width: 30%;
-		height: 1px;
-	}
-	.summary-line {
-		@include flexAlignCenter($justifyContent: space-between);
-		margin-bottom: 15px;
+  &__bottom {
+    background-color: white;
+    padding: 15px 5px;
+  }
+  &__summary {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  &__summary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      $midGrey,
+      transparent
+    );
+    width: 30%;
+    height: 1px;
+  }
+  .summary-line {
+    @include flexAlignCenter($justifyContent: space-between);
+    margin-bottom: 15px;
 
-		.number-products-in-car {
-			margin-right: 5px;
-			font-size: 1.1rem;
-			font-weight: 500;
-		}
-	}
-	&__actions {
-		@include flexAlignCenter;
-		padding-top: 10px;
-		flex-wrap: wrap;
+    .number-products-in-car {
+      margin-right: 5px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+  &__actions {
+    @include flexAlignCenter;
+    padding-top: 10px;
+    flex-wrap: wrap;
 
-		& .button-secondary {
-			margin-right: 20px;
-		}
+    & .button-secondary {
+      margin-right: 20px;
+    }
 
-		& .cta-button {
-			font-size: 1.3rem;
-		}
-	}
-	&__no-items-message {
-		margin: 200px auto;
-		text-align: center;
+    & .cta-button {
+      font-size: 1.3rem;
+    }
+  }
+  &__no-items-message {
+    margin: 200px auto;
+    text-align: center;
 
-		& a {
-			color: $primaryColor;
-		}
-	}
+    & a {
+      color: $primaryColor;
+    }
+  }
 
-	@include media-gte-sm {
-		margin: 5px calc((100vw - 634px) / 2 + 5px);
-	}
+  @include media-gte-sm {
+    margin: 5px calc((100vw - 634px) / 2 + 5px);
+  }
 }
 @include media-gte-sm {
-	.cart-wrapper {
-		background-image: linear-gradient(
-			to bottom right,
-			$primaryColor 5%,
-			$lightGrey 5%,
-			transparent 7%,
-			transparent 93%,
-			$lightGrey 95%,
-			$primaryColor 95%
-		);
-	}
+  .cart-wrapper {
+    background-image: linear-gradient(
+      to bottom right,
+      $primaryColor 5%,
+      $lightGrey 5%,
+      transparent 7%,
+      transparent 93%,
+      $lightGrey 95%,
+      $primaryColor 95%
+    );
+  }
 }

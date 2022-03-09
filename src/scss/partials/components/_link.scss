@@ -1,10 +1,10 @@
 .link {
-	&--primary {
-		color: $primaryColor;
-		font-weight: 500;
+  &--primary {
+    color: $primaryColor;
+    font-weight: 500;
 
-		&:hover {
-			color: $textColor;
-		}
-	}
+    &:hover {
+      color: $textColor;
+    }
+  }
 }

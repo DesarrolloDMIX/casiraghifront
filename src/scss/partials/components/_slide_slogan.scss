@@ -1,95 +1,95 @@
 .slide-slogan {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-	background: linear-gradient(
-			to top,
-			transparentize($darkAccent, 0.5),
-			transparentize($darkAccent, 0.5)
-		),
-		url('./images/Home-11.png') center / cover;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: linear-gradient(
+      to top,
+      transparentize($darkAccent, 0.5),
+      transparentize($darkAccent, 0.5)
+    ),
+    url("./images/Home-11.png") center / cover;
+  width: 100%;
 
-	&__slogan-container {
-		margin-bottom: 10px;
-		max-width: 248px;
+  &__slogan-container {
+    margin-bottom: 10px;
+    max-width: 248px;
 
-		svg * {
-			fill: white;
-		}
-	}
+    svg * {
+      fill: white;
+    }
+  }
 
-	&__text {
-		margin-top: 0;
-		font-size: 0.9rem;
-	}
+  &__text {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
 
-	&__link {
-		margin-bottom: 10px;
-	}
+  &__link {
+    margin-bottom: 10px;
+  }
 
-	&__payments {
-		justify-content: flex-start;
-	}
+  &__payments {
+    justify-content: flex-start;
+  }
 
-	&__image {
-		margin: 10px;
-		width: 100px;
-	}
+  &__image {
+    margin: 10px;
+    width: 100px;
+  }
 
-	@media screen and (max-width: 1023px) {
-		&__panel {
-			background-color: transparent;
+  @media screen and (max-width: 1023px) {
+    &__panel {
+      background-color: transparent;
 
-			&:hover {
-				background-color: transparent;
-			}
-		}
-	}
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
 
-	@include media-gte-lg {
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+  @include media-gte-lg {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
-		&__column {
-			flex: 1;
-			margin: 10px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
+    &__column {
+      flex: 1;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-			&--align_right {
-				align-items: flex-end;
-			}
+      &--align_right {
+        align-items: flex-end;
+      }
 
-			&--align_center {
-				align-items: center;
-			}
-		}
+      &--align_center {
+        align-items: center;
+      }
+    }
 
-		&__slogan-container {
-			max-width: 480px;
-		}
+    &__slogan-container {
+      max-width: 480px;
+    }
 
-		&__link {
-			display: inline-block;
-			margin-bottom: 10px;
+    &__link {
+      display: inline-block;
+      margin-bottom: 10px;
 
-			&:hover {
-				color: $darkAccent;
-			}
-		}
+      &:hover {
+        color: $darkAccent;
+      }
+    }
 
-		&__panel {
-			padding: 30px 20px;
-		}
+    &__panel {
+      padding: 30px 20px;
+    }
 
-		&__image {
-			margin: 10px;
-			min-width: 150px;
-			max-width: 150px;
-		}
-	}
+    &__image {
+      margin: 10px;
+      min-width: 150px;
+      max-width: 150px;
+    }
+  }
 }

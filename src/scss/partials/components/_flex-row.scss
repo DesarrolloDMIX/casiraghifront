@@ -1,33 +1,33 @@
 .flex-row {
-	display: flex;
-	width: 100%;
+  display: flex;
+  width: 100%;
 
-	> * {
-		flex: 1;
-		margin-right: 5px;
+  > * {
+    flex: 1;
+    margin-right: 5px;
 
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
-	&--h-center {
-		justify-content: center;
+  &--h-center {
+    justify-content: center;
 
-		> * {
-			flex: 0 0 auto;
-		}
-	}
+    > * {
+      flex: 0 0 auto;
+    }
+  }
 
-	&--h-right {
-		justify-content: flex-end;
+  &--h-right {
+    justify-content: flex-end;
 
-		> * {
-			flex: 0 0 auto;
-		}
-	}
+    > * {
+      flex: 0 0 auto;
+    }
+  }
 
-	&--v-end {
-		align-items: flex-end;
-	}
+  &--v-end {
+    align-items: flex-end;
+  }
 }

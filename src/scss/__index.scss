@@ -1,10 +1,8 @@
 // sass
-@import './partials/helpers/variables';
-@import './partials/helpers/mixins';
+@import "./partials/helpers/variables";
+@import "./partials/helpers/mixins";
 
+@import "./partials/layout/categories_main";
 
-@import './partials/layout/categories_main';
-
-@import './partials/components/categorie_main';
-@import './partials/components/button_secondary';
-
+@import "./partials/components/categorie_main";
+@import "./partials/components/button_secondary";

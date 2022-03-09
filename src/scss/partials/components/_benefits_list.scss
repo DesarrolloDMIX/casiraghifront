@@ -1,34 +1,34 @@
 .benefits-list {
-	margin: 0 auto;
-	max-width: 1200px;
-	&__item {
-		box-shadow: 0 5px 5px -5px $midGrey;
+  margin: 0 auto;
+  max-width: 1200px;
+  &__item {
+    box-shadow: 0 5px 5px -5px $midGrey;
 
-		&:last-child {
-			box-shadow: none;
-		}
-	}
+    &:last-child {
+      box-shadow: none;
+    }
+  }
 
-	@include media-gte-sm {
-		@include flexAlignCenter($align: stretch);
-		flex-wrap: wrap;
-		margin-bottom: 15px;
+  @include media-gte-sm {
+    @include flexAlignCenter($align: stretch);
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 
-		&__item {
-			box-shadow: 1px 1px 3px $midGrey;
-			border-radius: 5px;
-			flex: 0 1 50%;
-			min-width: 250px;
+    &__item {
+      box-shadow: 1px 1px 3px $midGrey;
+      border-radius: 5px;
+      flex: 0 1 50%;
+      min-width: 250px;
 
-			&:last-child {
-				box-shadow: 1px 1px 3px $midGrey;
-			}
-		}
-	}
+      &:last-child {
+        box-shadow: 1px 1px 3px $midGrey;
+      }
+    }
+  }
 
-	@include media-gte-lg {
-		&__item {
-			flex: 0 1 33.333%;
-		}
-	}
+  @include media-gte-lg {
+    &__item {
+      flex: 0 1 33.333%;
+    }
+  }
 }

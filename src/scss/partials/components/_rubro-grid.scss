@@ -1,36 +1,36 @@
 .rubro-grid {
-	background-color: white;
-	color: $darkBg;
-	padding: 5px 0px;
+  background-color: white;
+  color: $darkBg;
+  padding: 5px 0px;
 
-	> * {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
+  > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-	a {
-		color: $darkBg;
+  a {
+    color: $darkBg;
 
-		&:hover {
-			color: $midGrey;
-		}
-	}
+    &:hover {
+      color: $midGrey;
+    }
+  }
 
-	@include media-gte-lg {
-		display: flex;
-		justify-content: stretch;
-		align-items: stretch;
-		flex-wrap: wrap;
-		width: 80vw;
-		border-radius: 5px;
-		overflow: hidden;
-		padding: 0;
+  @include media-gte-lg {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 80vw;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0;
 
-		> * {
-			box-shadow: 3px 3px 3px transparentize($color: $darkAccent, $amount: 0.7);
-			margin-top: 0;
-			margin-bottom: 0;
-			flex: 1 1 30%;
-		}
-	}
+    > * {
+      box-shadow: 3px 3px 3px transparentize($color: $darkAccent, $amount: 0.7);
+      margin-top: 0;
+      margin-bottom: 0;
+      flex: 1 1 30%;
+    }
+  }
 }

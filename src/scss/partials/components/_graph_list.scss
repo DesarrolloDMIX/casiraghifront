@@ -1,8 +1,8 @@
 .graph-list {
-	@include flexAlignCenter($dir: column);
-	background-color: $darkAccent;
+  @include flexAlignCenter($dir: column);
+  background-color: $darkAccent;
 
-	@include media-gte-lg {
-		flex-direction: row;
-	}
+  @include media-gte-lg {
+    flex-direction: row;
+  }
 }

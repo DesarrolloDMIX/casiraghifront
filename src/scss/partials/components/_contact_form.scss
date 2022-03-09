@@ -1,83 +1,83 @@
 .contact-form {
-	position: relative;
-	text-align: left;
-	@include flexAlignCenter($dir: column);
+  position: relative;
+  text-align: left;
+  @include flexAlignCenter($dir: column);
 
-	label {
-		font-weight: 300;
-		margin-bottom: 10px;
-		font-size: 0.7rem;
-	}
+  label {
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+  }
 
-	input,
-	textarea {
-		font-size: 0.6rem;
-		margin: 0;
-	}
+  input,
+  textarea {
+    font-size: 0.6rem;
+    margin: 0;
+  }
 
-	&__sent-screen {
-		@include flexAlignCenter;
-		@include transition03;
-		text-align: center;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 0%;
-		background-color: transparentize($color: $darkAccent, $amount: 0.5);
-		overflow: hidden;
+  &__sent-screen {
+    @include flexAlignCenter;
+    @include transition03;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: transparentize($color: $darkAccent, $amount: 0.5);
+    overflow: hidden;
 
-		.contact-form.contact-form--sent & {
-			height: calc(100% - 20px);
-		}
-	}
+    .contact-form.contact-form--sent & {
+      height: calc(100% - 20px);
+    }
+  }
 
-	&__field-set {
-		@include flexAlignCenter($dir: column, $align: stretch);
-		@include transition03;
+  &__field-set {
+    @include flexAlignCenter($dir: column, $align: stretch);
+    @include transition03;
 
-		width: 100%;
-		max-width: 634px;
-		padding: 5px;
+    width: 100%;
+    max-width: 634px;
+    padding: 5px;
 
-		> *:not(:last-child) {
-			margin-bottom: 5px;
-		}
+    > *:not(:last-child) {
+      margin-bottom: 5px;
+    }
 
-		.contact-form.contact-form--sent & {
-			opacity: 0;
-		}
-	}
+    .contact-form.contact-form--sent & {
+      opacity: 0;
+    }
+  }
 
-	&__button {
-		margin-top: 5px;
-		font-size: 0.8rem;
-	}
+  &__button {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
 
-	&__title {
-		text-align: left;
-		font-size: 0.9rem;
-	}
+  &__title {
+    text-align: left;
+    font-size: 0.9rem;
+  }
 
-	@include media-gte-sm  {
-		&__title {
-			width: 100%;
-		}
-	}
+  @include media-gte-sm {
+    &__title {
+      width: 100%;
+    }
+  }
 
-	@include media-gte-lg {
-		&__field-set {
-			padding: 0;
-		}
+  @include media-gte-lg {
+    &__field-set {
+      padding: 0;
+    }
 
-		&__title {
-			font-size: 1.3rem;
-		}
+    &__title {
+      font-size: 1.3rem;
+    }
 
-		input,
-		textarea {
-			font-size: 0.7rem;
-			margin: 0;
-		}
-	}
+    input,
+    textarea {
+      font-size: 0.7rem;
+      margin: 0;
+    }
+  }
 }

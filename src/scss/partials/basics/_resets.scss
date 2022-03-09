@@ -1,50 +1,50 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 button {
-	background: none;
-	border: none;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a,
 button,
 input,
 textarea {
-	color: $textColor;
-	&:focus {
-		box-shadow: 0 0 2px 1px #46b6ae;
-		outline: none;
-	}
+  color: $textColor;
+  &:focus {
+    box-shadow: 0 0 2px 1px #46b6ae;
+    outline: none;
+  }
 }
 
 input,
 textarea,
 select {
-	font-size: 1.2rem;
-	border-radius: 3px;
-	color: $darkBg;
-	background-color: $textColor;
-	border: 1px solid $darkAccent;
-	padding: 5px;
-	font-family: 'Source Open Pro', Arial, Helvetica, sans-serif;
-	width: 100%;
-	margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  color: $darkBg;
+  background-color: $textColor;
+  border: 1px solid $darkAccent;
+  padding: 5px;
+  font-family: "Source Open Pro", Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-bottom: 15px;
 }
 input.input-error {
-	border-color: $errorColor;
+  border-color: $errorColor;
 }
 
 ul {
-	list-style-type: none;
-	padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 h1,
@@ -54,20 +54,20 @@ h4,
 h5,
 h6,
 p {
-	font-weight: 300;
-	line-height: 1;
+  font-weight: 300;
+  line-height: 1;
 }
 
 img,
 svg {
-	width: 100%;
-	line-height: 0;
+  width: 100%;
+  line-height: 0;
 }
 
 div {
-	line-height: 0;
+  line-height: 0;
 
-	*:not(div) {
-		line-height: 1;
-	}
+  *:not(div) {
+    line-height: 1;
+  }
 }

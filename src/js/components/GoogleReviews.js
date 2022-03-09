@@ -1,36 +1,36 @@
 const GoogleReviews = function (element) {
-    this.elem = element
-    this.button = this.elem.querySelector("button")
+  this.elem = element;
+  this.button = this.elem.querySelector("button");
 
-    const rightArrowElement = this.elem.querySelector('.arrow-container-right')
-    const leftArrowElement = this.elem.querySelector('.arrow-container-left')
-    this.reviewsContainer = this.elem.querySelector('.reviews')
+  const rightArrowElement = this.elem.querySelector(".arrow-container-right");
+  const leftArrowElement = this.elem.querySelector(".arrow-container-left");
+  this.reviewsContainer = this.elem.querySelector(".reviews");
 
-    this.currentPosition = 0
+  this.currentPosition = 0;
 
-    const handleSlide = (evt) => {
-      const skipAmount =
-        window.innerWidth > 1400 ? 3 : window.innerWidth > 1024 ? 2 : 1;
-      const cardWidth = this.elem
-        .querySelector(".review")
-        .getBoundingClientRect().width;
-      const reviewsLength = Array.from(
-        this.elem.querySelectorAll(".review")
-      ).length;
-      const direction = parseInt(evt.target.dataset.direction);
-      let targetPosition = this.currentPosition + direction * skipAmount;
+  const handleSlide = (evt) => {
+    const skipAmount =
+      window.innerWidth > 1400 ? 3 : window.innerWidth > 1024 ? 2 : 1;
+    const cardWidth = this.elem
+      .querySelector(".review")
+      .getBoundingClientRect().width;
+    const reviewsLength = Array.from(
+      this.elem.querySelectorAll(".review")
+    ).length;
+    const direction = parseInt(evt.target.dataset.direction);
+    let targetPosition = this.currentPosition + direction * skipAmount;
 
-      //solo había que invertir el target position jaja
-      // if (targetPosition < 0) targetPosition = 0;
-      // if (targetPosition > reviewsLength - 1) targetPosition = reviewsLength - 1;
-      if (targetPosition < 0) targetPosition = reviewsLength - 1;
-      if (targetPosition > reviewsLength - 1) targetPosition = 0;
+    //solo había que invertir el target position jaja
+    // if (targetPosition < 0) targetPosition = 0;
+    // if (targetPosition > reviewsLength - 1) targetPosition = reviewsLength - 1;
+    if (targetPosition < 0) targetPosition = reviewsLength - 1;
+    if (targetPosition > reviewsLength - 1) targetPosition = 0;
 
-      this.reviewsContainer.scrollTo({
-        behavior: "smooth",
-        left: cardWidth * targetPosition,
-      });
-      this.currentPosition = targetPosition;
+    this.reviewsContainer.scrollTo({
+      behavior: "smooth",
+      left: cardWidth * targetPosition,
+    });
+    this.currentPosition = targetPosition;
 
     //   console.log({
     //     direction,
@@ -40,20 +40,18 @@ const GoogleReviews = function (element) {
     //     targetPosition,
     //     skipAmount,
     //   });
-    }
-    rightArrowElement.addEventListener('click', handleSlide);
-    leftArrowElement.addEventListener('click', handleSlide);
+  };
+  rightArrowElement.addEventListener("click", handleSlide);
+  leftArrowElement.addEventListener("click", handleSlide);
 
+  this.init = function () {
+    fetch("http://dev557.casiraghi.com.ar/reviews")
+      .then((res) => res.json())
+      .then(({ result }) => {
+        const reviewsElement = this.elem.querySelector(".reviews");
+        const starsElement = this.elem.querySelector(".total-rating-container");
 
-    this.init = function () {
-        fetch("http://dev557.casiraghi.com.ar/reviews")
-            .then(res => res.json())
-            .then(({ result }) => {
-
-                const reviewsElement = this.elem.querySelector('.reviews');
-                const starsElement = this.elem.querySelector('.total-rating-container')
-
-                starsElement.innerHTML += `
+        starsElement.innerHTML += `
                     <div class="total-rating">
                         <span class="total-rating-stars"> 
                             <svg class="starRating" viewBox="0 0 181 147" fill="#ffff00" xmlns="http://www.w3.org/2000/svg">
@@ -80,23 +78,22 @@ const GoogleReviews = function (element) {
                         </span>
                         <span class="total-rating-number"> ${result.rating} </span>
                     </div>
-                `
-                result.reviews.forEach(review => {
-                    // Math.floor(review.rating)
-                    let starsRating = '';
-                    for (let i = 0; i < 5; i++) {
+                `;
+        result.reviews.forEach((review) => {
+          // Math.floor(review.rating)
+          let starsRating = "";
+          for (let i = 0; i < 5; i++) {
+            let starColor =
+              i + 1 <= Math.floor(review.rating) ? "#ffff00" : "gray";
 
-                        let starColor = i + 1 <= Math.floor(review.rating) ? "#ffff00" : "gray";
-
-                        starsRating += `
+            starsRating += `
                         <svg class="starRating" viewBox="0 0 181 147" fill="${starColor}" xmlns="http://www.w3.org/2000/svg">
                         <path d="M90.8887 2.05473L115.135 47.0899L115.257 47.3147L115.51 47.3485L169.633 54.5577L130.5 89.5243L130.305 89.6989L130.337 89.959L137.261 145.506L91.1578 116.079L90.8887 115.907L90.6197 116.079L44.5165 145.506L51.4405 89.959L51.473 89.6989L51.2775 89.5243L12.1444 54.5577L66.2678 47.3485L66.5209 47.3147L66.642 47.0899L90.8887 2.05473Z" stroke="black" stroke-width="3px"/>
                         </svg>
-                    `
-                    }
+                    `;
+          }
 
-
-                    reviewsElement.innerHTML += `
+          reviewsElement.innerHTML += `
                 <div class=" review ">
 
                     <div class="card-review">
@@ -104,10 +101,10 @@ const GoogleReviews = function (element) {
                         <div class="card-review-header" >
                             <div class="card-info">
                                 <div class="review-img"> <img src='${
-                                    review.profile_photo_url
+                                  review.profile_photo_url
                                 }' referrerpolicy="no-referrer"/> </div> 
                                 <p class="review-name"> ${
-                                    review.author_name
+                                  review.author_name
                                 }                                         </p>
                             </div>
                             <div class="rating-container">
@@ -117,7 +114,7 @@ const GoogleReviews = function (element) {
 
                         <div class="card-review-body"> 
                             <span class="review-text" > ${
-                                review.text.length > 150
+                              review.text.length > 150
                                 ? review.text.slice(0, 150) + "..."
                                 : review.text
                             }                                                </span> 
@@ -126,27 +123,24 @@ const GoogleReviews = function (element) {
                         <div class="card-review-footer">
                             <button class="btn-review-author_url">
                                 <a class="review-author_url" href="${
-                                    review.author_url
+                                  review.author_url
                                 } "> Ver más </a>
                             </button>
                         </div>
 
                     </div>
-                    <a href="${review.author_url}" target="_blank" class="card-review-overlay-link"></a>
+                    <a href="${
+                      review.author_url
+                    }" target="_blank" class="card-review-overlay-link"></a>
                 </div>`;
-
-                });
-
-            })
-        return this
-    }
-
-
-
-}
+        });
+      });
+    return this;
+  };
+};
 
 export default {
-    create: GoogleReviews,
-    selector: '.js-google-reviews',
-    key: 'GoogleReviews',
-}
+  create: GoogleReviews,
+  selector: ".js-google-reviews",
+  key: "GoogleReviews",
+};

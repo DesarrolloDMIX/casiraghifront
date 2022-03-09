@@ -1,8 +1,8 @@
 .payment-logo-list {
-	@include flexAlignCenter;
-	flex-wrap: wrap;
+  @include flexAlignCenter;
+  flex-wrap: wrap;
 
-	&__item {
-		margin: 3px;
-	}
+  &__item {
+    margin: 3px;
+  }
 }

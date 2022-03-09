@@ -1,77 +1,77 @@
 .price {
-	color: $darkBg;
-	font-size: 1.2rem;
-	font-weight: 500;
-	position: relative;
-	display: inline-block;
+  color: $darkBg;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
 
-	&__price,
-	&__discounted-price {
-		display: inline-block;
-		position: relative;
-		margin: 0;
-		font-weight: 500;
+  &__price,
+  &__discounted-price {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-weight: 500;
 
-		.price--with-iva & {
-			padding-bottom: 15px;
-		}
+    .price--with-iva & {
+      padding-bottom: 15px;
+    }
 
-		.price--with-iva &::after {
-			text-align: center;
-			content: 'IVA incluido';
-			position: absolute;
-			width: 150%;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			font-size: 0.6rem;
-			font-weight: 300;
-		}
+    .price--with-iva &::after {
+      text-align: center;
+      content: "IVA incluido";
+      position: absolute;
+      width: 150%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.6rem;
+      font-weight: 300;
+    }
 
-		.price--with-cents & {
-			padding-right: 20px;
-		}
-	}
+    .price--with-cents & {
+      padding-right: 20px;
+    }
+  }
 
-	&__price {
-		.price--with-discounted-price & {
-			color: $midGrey;
-			position: absolute;
-			left: -110%;
-			transform: translateY(-30%);
-			padding-bottom: 0;
+  &__price {
+    .price--with-discounted-price & {
+      color: $midGrey;
+      position: absolute;
+      left: -110%;
+      transform: translateY(-30%);
+      padding-bottom: 0;
 
-			.product-card__price-container & {
-				font-size: 1rem;
-				left: 0;
-				bottom: 100%;
-				transform: translateY(20%);
-			}
+      .product-card__price-container & {
+        font-size: 1rem;
+        left: 0;
+        bottom: 100%;
+        transform: translateY(20%);
+      }
 
-			.cart-item__price-container & {
-				font-size: 1rem;
-				left: -10%;
-				bottom: 100%;
-				transform: none;
-			}
+      .cart-item__price-container & {
+        font-size: 1rem;
+        left: -10%;
+        bottom: 100%;
+        transform: none;
+      }
 
-			&::after {
-				content: '';
-				height: 1px;
-				width: 100%;
-				background-color: $errorColor;
-				top: 50%;
-				left: 0;
-				transform: none;
-			}
-		}
-	}
+      &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: $errorColor;
+        top: 50%;
+        left: 0;
+        transform: none;
+      }
+    }
+  }
 
-	&__cents {
-		position: absolute;
-		top: 0;
-		right: 0;
-		font-size: 0.8rem;
-		font-weight: 300;
-	}
+  &__cents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
 }

@@ -1,13 +1,13 @@
 .graph {
-	background-color: $darkBg;
+  background-color: $darkBg;
 
-	&:not(:first-child) {
-		margin-top: 3px;
-	}
+  &:not(:first-child) {
+    margin-top: 3px;
+  }
 
-	@include media-gte-lg {
-		&:not(:first-child) {
-			margin-top: 0;
-		}
-	}
+  @include media-gte-lg {
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
 }

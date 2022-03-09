@@ -1,62 +1,62 @@
 .cart-item {
-	background-color: white;
-	overflow: hidden;
-	margin-bottom: 15px;
-	@include flexAlignCenter($align: stretch, $justifyContent: flex-start);
-	padding: 15px 5px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 15px;
+  @include flexAlignCenter($align: stretch, $justifyContent: flex-start);
+  padding: 15px 5px;
 
-	&:last-child {
-		margin-bottom: 30px;
-	}
-	&__column-img {
-		width: 35%;
-		flex-shrink: 0;
-		border-radius: 5px;
-		border: 2px solid $primaryColor;
-		overflow: hidden;
-	}
-	&__column-details {
-		padding-left: 10px;
-		@include flexAlignCenter($dir: column, $align: stretch);
-		width: 80%;
-	}
-	&__img-container {
-		height: 100%;
-	}
-	&__img {
-		height: 100%;
-		object-fit: cover;
-	}
-	&__title {
-		margin-bottom: 10px;
-		font-size: 1.3rem;
-		font-weight: 300;
-		color: $midGrey;
-	}
-	&__qta {
-		color: $midGrey;
-	}
-	&__qta-number {
-		color: $darkBg;
-		font-size: 1.1rem;
-		font-weight: 500;
-		margin-left: 5px;
-	}
-	&__price-container {
-		text-align: right;
-	}
-	&__delete-item-container {
-		margin-top: 5px;
-	}
-	&__delete-item {
-		color: $errorColor;
-		opacity: 0.8;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  &__column-img {
+    width: 35%;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 2px solid $primaryColor;
+    overflow: hidden;
+  }
+  &__column-details {
+    padding-left: 10px;
+    @include flexAlignCenter($dir: column, $align: stretch);
+    width: 80%;
+  }
+  &__img-container {
+    height: 100%;
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $midGrey;
+  }
+  &__qta {
+    color: $midGrey;
+  }
+  &__qta-number {
+    color: $darkBg;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  &__price-container {
+    text-align: right;
+  }
+  &__delete-item-container {
+    margin-top: 5px;
+  }
+  &__delete-item {
+    color: $errorColor;
+    opacity: 0.8;
 
-		&:hover {
-			opacity: 1;
-		}
-		&:active {
-			background-color: $lightGrey;
-		}
-	}
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      background-color: $lightGrey;
+    }
+  }
 }

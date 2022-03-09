@@ -1,25 +1,25 @@
 .slide-metal-roofing {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-	background: linear-gradient(
-			to top,
-			transparentize(black, 0.33),
-			transparentize(#002d29, 0.33) 40%
-		),
-		url('./images/metal-roofing-back.jpg') center / cover;
-	width: 100%;
-	text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: linear-gradient(
+      to top,
+      transparentize(black, 0.33),
+      transparentize(#002d29, 0.33) 40%
+    ),
+    url("./images/metal-roofing-back.jpg") center / cover;
+  width: 100%;
+  text-align: left;
 
-	&__button {
-		padding: 10px 50px;
-		margin-top: 20px;
-		background-color: transparentize($color: black, $amount: 0.5);
-		transition: all 0.3s ease-in-out;
+  &__button {
+    padding: 10px 50px;
+    margin-top: 20px;
+    background-color: transparentize($color: black, $amount: 0.5);
+    transition: all 0.3s ease-in-out;
 
-		&:hover {
-			background-color: black;
-		}
-	}
+    &:hover {
+      background-color: black;
+    }
+  }
 }

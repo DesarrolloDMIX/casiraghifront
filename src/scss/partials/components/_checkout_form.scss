@@ -1,145 +1,145 @@
 .checkout-wrapper {
-	position: relative;
-	color: $darkBg;
-	padding: 15px 5px;
-	background-image: linear-gradient(
-		to bottom right,
-		$darkBg 5%,
-		darken($darkBg, 5%) 5%,
-		$darkBg 7%,
-		$darkBg 20%,
-		darken($darkBg, 5%) 20%,
-		$darkBg 25%,
-		$darkBg 40%,
-		darken($darkBg, 5%) 45%,
-		$darkBg 45%,
-		$darkBg 55%,
-		darken($darkBg, 5%) 55%,
-		$darkBg 60%,
-		$darkBg 75%,
-		darken($darkBg, 5%) 80%,
-		$darkBg 80%,
-		$darkBg 93%,
-		darken($darkBg, 5%) 95%,
-		$darkBg 95%
-	);
+  position: relative;
+  color: $darkBg;
+  padding: 15px 5px;
+  background-image: linear-gradient(
+    to bottom right,
+    $darkBg 5%,
+    darken($darkBg, 5%) 5%,
+    $darkBg 7%,
+    $darkBg 20%,
+    darken($darkBg, 5%) 20%,
+    $darkBg 25%,
+    $darkBg 40%,
+    darken($darkBg, 5%) 45%,
+    $darkBg 45%,
+    $darkBg 55%,
+    darken($darkBg, 5%) 55%,
+    $darkBg 60%,
+    $darkBg 75%,
+    darken($darkBg, 5%) 80%,
+    $darkBg 80%,
+    $darkBg 93%,
+    darken($darkBg, 5%) 95%,
+    $darkBg 95%
+  );
 
-	.checkout-form {
-		position: relative;
-		background-image: linear-gradient(
-				to bottom,
-				transparentize($textColor, 0.5),
-				transparentize($textColor, 0.5)
-			),
-			url('./images/lightbg-cropped.jpg');
-		padding: 15px 5px;
-		border-radius: 5px;
+  .checkout-form {
+    position: relative;
+    background-image: linear-gradient(
+        to bottom,
+        transparentize($textColor, 0.5),
+        transparentize($textColor, 0.5)
+      ),
+      url("./images/lightbg-cropped.jpg");
+    padding: 15px 5px;
+    border-radius: 5px;
 
-		&__details {
-			margin-top: 20px;
+    &__details {
+      margin-top: 20px;
 
-			p {
-				font-size: 0.8rem;
-				font-weight: 700;
-			}
-			h3 {
-				font-size: 1rem;
-				font-weight: 700;
-			}
-		}
+      p {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
 
-		&__button-container {
-			margin-top: 40px;
-			text-align: center;
+    &__button-container {
+      margin-top: 40px;
+      text-align: center;
 
-			.cta-button {
-				font-size: 1.3rem;
-			}
-		}
-	}
-	.fieldset {
-		border-bottom: 1px solid $midGrey;
+      .cta-button {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .fieldset {
+    border-bottom: 1px solid $midGrey;
 
-		&__title {
-			font-size: 1.6rem;
-		}
-		.field__label {
-			display: inline-block;
-			margin-bottom: 5px;
-			font-size: 0.8rem;
-			font-weight: 500;
-		}
-		.field__input {
-			background-color: $textColor;
-			color: $darkBg;
-			margin-bottom: 20px;
-			font-size: 0.85rem;
-		}
-		.field__help {
-			display: inline-block;
-			margin-bottom: 20px;
-			margin-top: -15px;
-		}
-	}
+    &__title {
+      font-size: 1.6rem;
+    }
+    .field__label {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .field__input {
+      background-color: $textColor;
+      color: $darkBg;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+    }
+    .field__help {
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-top: -15px;
+    }
+  }
 
-	.radio-group {
-		@include flexAlignCenter($dir: column, $align: stretch);
-		margin-bottom: 20px;
+  .radio-group {
+    @include flexAlignCenter($dir: column, $align: stretch);
+    margin-bottom: 20px;
 
-		.radio-field {
-			@include flexAlignCenter($justifyContent: flex-start);
-			margin-bottom: 20px;
+    .radio-field {
+      @include flexAlignCenter($justifyContent: flex-start);
+      margin-bottom: 20px;
 
-			&__input {
-				width: auto;
-				margin-bottom: 0;
-			}
-			&__label {
-				font-size: 0.85rem;
-				font-weight: 500;
-			}
-		}
-	}
+      &__input {
+        width: auto;
+        margin-bottom: 0;
+      }
+      &__label {
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+    }
+  }
 
-	.group-credit-card-expiry {
-		@include flexAlignCenter($justifyContent: flex-start);
+  .group-credit-card-expiry {
+    @include flexAlignCenter($justifyContent: flex-start);
 
-		.field-credit-card-expiry {
-			margin: 5px;
-		}
-		input {
-			background-color: $textColor;
-			color: $darkBg;
-			font-size: 0.85rem;
-		}
-	}
+    .field-credit-card-expiry {
+      margin: 5px;
+    }
+    input {
+      background-color: $textColor;
+      color: $darkBg;
+      font-size: 0.85rem;
+    }
+  }
 
-	@include media-gte-sm {
-		padding: 15px calc((100vw - 634px) / 2 + 5px);
+  @include media-gte-sm {
+    padding: 15px calc((100vw - 634px) / 2 + 5px);
 
-		.checkout-form {
-			padding: 15px 25px;
-		}
-	}
+    .checkout-form {
+      padding: 15px 25px;
+    }
+  }
 
-	@include media-gte-lg {
-		.checkout-form {
-			&__details {
-				position: absolute;
-				left: 102%;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 200px;
+  @include media-gte-lg {
+    .checkout-form {
+      &__details {
+        position: absolute;
+        left: 102%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 200px;
 
-				p {
-					font-size: 0.8rem;
-					font-weight: 700;
-				}
-				h3 {
-					font-size: 1rem;
-					font-weight: 700;
-				}
-			}
-		}
-	}
+        p {
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+        h3 {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }

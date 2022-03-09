@@ -1,17 +1,17 @@
 .cta-button {
-	@include transition03;
-	background-color: $primaryColor;
-	padding: 5px 12px;
-	border-radius: 5px;
-	font-size: 1rem;
-	font-weight: 500;
+  @include transition03;
+  background-color: $primaryColor;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 
-	&:hover {
-		background-color: $darkBg;
-	}
+  &:hover {
+    background-color: $darkBg;
+  }
 
-	&--large {
-		padding: 15px 50px;
-		font-size: 1.3rem;
-	}
+  &--large {
+    padding: 15px 50px;
+    font-size: 1.3rem;
+  }
 }

@@ -1,149 +1,148 @@
 .card {
-	@include flexAlignCenter($dir: column);
-	position: relative;
-	padding: 10px 0;
-	// min-width: 200px;
-	// max-width: 275px;
-	width: 280px;
-	background-color: $textColor;
-	align-self: stretch;
-	border-radius: 20px;
-	text-align: center;
-	transition: box-shadow 0.3s ease-in-out;
+  @include flexAlignCenter($dir: column);
+  position: relative;
+  padding: 10px 0;
+  // min-width: 200px;
+  // max-width: 275px;
+  width: 280px;
+  background-color: $textColor;
+  align-self: stretch;
+  border-radius: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
 
-	&:hover {
-		box-shadow: 2px 2px 5px transparentize(black, 0.7);
-	}
+  &:hover {
+    box-shadow: 2px 2px 5px transparentize(black, 0.7);
+  }
 }
 
 .card__img {
-	width: 180px;
-	height: 180px;
-	background: url('./images/border-circle.png') center / cover;
-	background-color: $textColor;
-	border-radius: 50%;
-	padding: 15px;
-	position: relative;
+  width: 180px;
+  height: 180px;
+  background: url("./images/border-circle.png") center / cover;
+  background-color: $textColor;
+  border-radius: 50%;
+  padding: 15px;
+  position: relative;
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 50%;
-	}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
-	@at-root .card__discount {
-		@include flexAlignCenter;
-		position: absolute;
-		top: 5%;
-		left: 5%;
-		color: $darkAccent;
-		padding: 15px;
-		width: 55px;
-		height: 55px;
-		font-weight: 500;
-		border-radius: 50%;
-		background-color: $primaryColor;
-		box-shadow: 0 0 0 2px $textColor;
+  @at-root .card__discount {
+    @include flexAlignCenter;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: $darkAccent;
+    padding: 15px;
+    width: 55px;
+    height: 55px;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    box-shadow: 0 0 0 2px $textColor;
 
-		.white-text {
-			color: white;
-		}
-	}
+    .white-text {
+      color: white;
+    }
+  }
 }
 
 .card__description {
-	width: 100%;
-	margin-top: 10px;
-	padding: 5px;
-	background-color: $darkBg;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: $darkBg;
 }
 
 .card__description--title {
-	margin: 0;
-	font-size: 1.1rem;
-	width: 100%;
+  margin: 0;
+  font-size: 1.1rem;
+  width: 100%;
 }
 
 .card__description--text {
-	font-size: 0.8rem;
-	font-style: italic;
-	font-weight: 100;
-	line-height: 1.5;
-	margin: 5px;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 1.5;
+  margin: 5px;
 }
 
 .card .price {
-	margin: 15px 0;
+  margin: 15px 0;
 }
 
-
 .card--secondary {
-	.card__description {
-		padding: 20px 15px;
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
+  .card__description {
+    padding: 20px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .card.active {
-	box-shadow: 2px 2px 8px $primaryColor;
+  box-shadow: 2px 2px 8px $primaryColor;
 }
 
 .card__link-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .card__link-overlay:hover + .card__see-more-button {
-	background-color: #3c3c3c;
+  background-color: #3c3c3c;
 }
 
 .card__add-to-cart-field {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	margin-top: 5px;
-	margin-bottom: -10px;
-	padding: 15px 20px;
-	width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  padding: 15px 20px;
+  width: 100%;
 
-	button {
-		font-size: 1.2rem;
-	}
+  button {
+    font-size: 1.2rem;
+  }
 
-	input {
-		position: absolute;
-		top: 50%;
-		right: 10px;
-		transform: translateY(-50%);
-		width: 60px;
-		text-align: center;
-		margin-bottom: 0;
-	}
+  input {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 60px;
+    text-align: center;
+    margin-bottom: 0;
+  }
 
-	& .card__add-to-cart-success-message {
-		@include transition03;
-		position: absolute;
-		bottom: 50%;
-		left: 50%;
-		transform: translateX(-50%);
-		padding: 15px;
-		background-color: $textColor;
-		color: $darkBg;
-		border: 2px solid $primaryColor;
-		font-size: 1.3rem;
-		border-radius: 5px;
-		visibility: hidden;
-		opacity: 0;
-	}
+  & .card__add-to-cart-success-message {
+    @include transition03;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: $textColor;
+    color: $darkBg;
+    border: 2px solid $primaryColor;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+  }
 
-	&.success .card__add-to-cart-success-message {
-		visibility: visible;
-		opacity: 1;
-		bottom: 120%;
-	}
+  &.success .card__add-to-cart-success-message {
+    visibility: visible;
+    opacity: 1;
+    bottom: 120%;
+  }
 }

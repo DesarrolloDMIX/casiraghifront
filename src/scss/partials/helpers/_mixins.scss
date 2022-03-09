@@ -1,53 +1,53 @@
 @mixin transition03($easing: ease-in-out) {
-	transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @mixin flexAlignCenter($align: center, $justifyContent: center, $dir: row) {
-	display: flex;
-	align-items: $align;
-	justify-content: $justifyContent;
-	flex-direction: $dir;
+  display: flex;
+  align-items: $align;
+  justify-content: $justifyContent;
+  flex-direction: $dir;
 }
 
 @mixin smallShadow {
-	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 @mixin ternium {
-	padding-bottom: 35px !important;
-	position: relative !important;
+  padding-bottom: 35px !important;
+  position: relative !important;
 
-	&::after {
-		line-height: 0;
-		content: '';
-		position: absolute;
-		right: 10px;
-		bottom: 10px;
-		background: url('./images/ternium.png') bottom right / 60px;
-		background-repeat: no-repeat;
-		background-clip: padding-box;
-		padding: 20px 30px;
-	}
+  &::after {
+    line-height: 0;
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: url("./images/ternium.png") bottom right / 60px;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    padding: 20px 30px;
+  }
 
-	@include media-gte-lg {
-		padding-bottom: 70px;
+  @include media-gte-lg {
+    padding-bottom: 70px;
 
-		&::after {
-			background: url('./images/ternium.png') bottom right / 120px;
-			background-repeat: no-repeat;
-			padding: 40px 60px;
-		}
-	}
+    &::after {
+      background: url("./images/ternium.png") bottom right / 120px;
+      background-repeat: no-repeat;
+      padding: 40px 60px;
+    }
+  }
 }
 
 @mixin media-gte-sm($px: 634px) {
-	@media screen and (min-width: $px) {
-		@content;
-	}
+  @media screen and (min-width: $px) {
+    @content;
+  }
 }
 
 @mixin media-gte-lg($px: 1024px) {
-	@media screen and (min-width: $px) {
-		@content;
-	}
+  @media screen and (min-width: $px) {
+    @content;
+  }
 }

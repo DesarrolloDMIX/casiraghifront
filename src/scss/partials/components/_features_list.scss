@@ -1,24 +1,24 @@
 .features-list {
-	@include flexAlignCenter($dir: column);
-	background-color: $textColor;
-	color: $darkBg;
-	text-align: center;
+  @include flexAlignCenter($dir: column);
+  background-color: $textColor;
+  color: $darkBg;
+  text-align: center;
 
-	@include media-gte-sm {
-		flex-direction: row;
-		align-items: stretch;
-		flex-wrap: wrap;
+  @include media-gte-sm {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
 
-		> * {
-			flex-basis: 50%;
-		}
-	}
+    > * {
+      flex-basis: 50%;
+    }
+  }
 
-	@include media-gte-lg {
-		text-align: left;
+  @include media-gte-lg {
+    text-align: left;
 
-		> * {
-			flex-basis: 25%;
-		}
-	}
+    > * {
+      flex-basis: 25%;
+    }
+  }
 }

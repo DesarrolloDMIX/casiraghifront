@@ -1,105 +1,105 @@
 .carousel__container {
-	text-align: center;
-	background-color: $lightGrey;
-	background: linear-gradient(to bottom, $lightGrey, rgba(0, 0, 0, 0) 5%),
-		url('./images/lightbg.jpg') center / cover;
-	overflow: hidden;
+  text-align: center;
+  background-color: $lightGrey;
+  background: linear-gradient(to bottom, $lightGrey, rgba(0, 0, 0, 0) 5%),
+    url("./images/lightbg.jpg") center / cover;
+  overflow: hidden;
 }
 
 .carousel__header {
-	background-color: $darkBg;
-	background-image: linear-gradient(
-		to right,
-		darken($darkBg, 6%),
-		rgba(0, 0, 0, 0) 10%,
-		darken($darkBg, 6%) 10%,
-		rgba(0, 0, 0, 0) 20%,
-		rgba(0, 0, 0, 0) 80%,
-		darken($darkBg, 6%) 90%,
-		rgba(0, 0, 0, 0) 90%,
-		darken($darkBg, 6%)
-	);
-	padding: 5px;
-	margin: 0;
-	@include smallShadow;
+  background-color: $darkBg;
+  background-image: linear-gradient(
+    to right,
+    darken($darkBg, 6%),
+    rgba(0, 0, 0, 0) 10%,
+    darken($darkBg, 6%) 10%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    darken($darkBg, 6%) 90%,
+    rgba(0, 0, 0, 0) 90%,
+    darken($darkBg, 6%)
+  );
+  padding: 5px;
+  margin: 0;
+  @include smallShadow;
 }
 
 .carousel {
-	position: relative;
-	padding: 25px 0 35px;
+  position: relative;
+  padding: 25px 0 35px;
 }
 
 .carousel__control {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	border-radius: 5px;
-	background-color: $primaryColor;
-	padding: 3px;
-	z-index: 90;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  background-color: $primaryColor;
+  padding: 3px;
+  z-index: 90;
 }
 
 .carousel__prev {
-	left: 5%;
-	transform: translateY(-50%) rotateZ(180deg);
+  left: 5%;
+  transform: translateY(-50%) rotateZ(180deg);
 }
 .carousel__next {
-	right: 5%;
+  right: 5%;
 }
 
 .carousel__track {
-	display: flex;
-	justify-content: stretch;
-	width: 400%;
-	transform: translateX(0%);
-	@include transition03;
+  display: flex;
+  justify-content: stretch;
+  width: 400%;
+  transform: translateX(0%);
+  @include transition03;
 }
 
 .carousel__card--container {
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 25%;
-	@include flexAlignCenter;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  @include flexAlignCenter;
 
-	& > a {
-        display: flex;
-    }
+  & > a {
+    display: flex;
+  }
 }
 
 .carousel__item-container {
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 25%;
-	@include flexAlignCenter;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  @include flexAlignCenter;
 }
 
 @include media-gte-sm {
-	.carousel {
-		padding: 25px 5vw 35px;
-	}
-	.carousel__track {
-		width: 200%;
-	}
+  .carousel {
+    padding: 25px 5vw 35px;
+  }
+  .carousel__track {
+    width: 200%;
+  }
 }
 
 @include media-gte-lg {
-	.carousel__header {
-		font-size: 2.2rem;
-	}
-	.carousel__control.icon {
-		width: 60px;
-	}
-	.carousel__prev {
-		left: 2%;
-	}
-	.carousel__next {
-		right: 2%;
-	}
-	.carousel__track {
-		width: 100%;
-	}
-	.carousel__card--container,
-	.carousel__item-container {
-		flex-basis: 33.333%;
-	}
+  .carousel__header {
+    font-size: 2.2rem;
+  }
+  .carousel__control.icon {
+    width: 60px;
+  }
+  .carousel__prev {
+    left: 2%;
+  }
+  .carousel__next {
+    right: 2%;
+  }
+  .carousel__track {
+    width: 100%;
+  }
+  .carousel__card--container,
+  .carousel__item-container {
+    flex-basis: 33.333%;
+  }
 }

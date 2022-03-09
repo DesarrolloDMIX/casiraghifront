@@ -1,46 +1,46 @@
 .fixed-whatsapp {
-	display: none;
-	position: fixed;
-	top: 45%;
-	right: 0;
+  display: none;
+  position: fixed;
+  top: 45%;
+  right: 0;
 
-	align-items: center;
+  align-items: center;
 
-	&:hover > &__content {
-		border-width: 5px;
-		padding: 10px;
-		max-width: 300px;
-	}
+  &:hover > &__content {
+    border-width: 5px;
+    padding: 10px;
+    max-width: 300px;
+  }
 
-	&__content {
-		display: flex;
-		flex-direction: column;
-		background-color: $textColor;
-		color: $darkAccent;
-		padding: 10px 0;
-		border: 0px solid #33ad3b;
-		border-right: 0;
-		border-radius: 5px 0 0 5px;
-		max-width: 0;
-		transition: all 0.5s ease-in-out;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: $textColor;
+    color: $darkAccent;
+    padding: 10px 0;
+    border: 0px solid #33ad3b;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    max-width: 0;
+    transition: all 0.5s ease-in-out;
 
-		> * {
-			white-space: nowrap;
-		}
-		> *:not(:last-child) {
-			margin-bottom: 3px;
-		}
+    > * {
+      white-space: nowrap;
+    }
+    > *:not(:last-child) {
+      margin-bottom: 3px;
+    }
 
-		a {
-			color: $primaryColor;
+    a {
+      color: $primaryColor;
 
-			&:hover {
-				color: $darkAccent;
-			}
-		}
-	}
+      &:hover {
+        color: $darkAccent;
+      }
+    }
+  }
 
-	@include media-gte-sm {
-		display: flex;
-	}
+  @include media-gte-sm {
+    display: flex;
+  }
 }

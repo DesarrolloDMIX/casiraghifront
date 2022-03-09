@@ -1,19 +1,19 @@
 .product-details {
-	background-color: $textColor;
-	color: $darkBg;
-	border-radius: 5px;
-	margin-top: 10px;
-	overflow: hidden;
-	font-size: 1rem;
-	text-align: center;
+  background-color: $textColor;
+  color: $darkBg;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+  text-align: center;
 
-	&__row {
-		@include flexAlignCenter($justifyContent: space-between);
-		box-shadow: 0 2px 3px transparentize($color: black, $amount: 0.7);
+  &__row {
+    @include flexAlignCenter($justifyContent: space-between);
+    box-shadow: 0 2px 3px transparentize($color: black, $amount: 0.7);
 
-		> * {
-			flex: 1;
-			padding: 0 3%;
-		}
-	}
+    > * {
+      flex: 1;
+      padding: 0 3%;
+    }
+  }
 }

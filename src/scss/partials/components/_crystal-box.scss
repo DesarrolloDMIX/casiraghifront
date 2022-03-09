@@ -1,8 +1,9 @@
 .crystal-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba($color: $lightGrey, $alpha: .1) linear-gradient(to left, rgba($lightGrey, .5), transparent);
-    box-shadow: 1px 0 3px $darkAccent, 0 0 5px 2px rgba($lightGrey, .5) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba($color: $lightGrey, $alpha: 0.1)
+    linear-gradient(to left, rgba($lightGrey, 0.5), transparent);
+  box-shadow: 1px 0 3px $darkAccent, 0 0 5px 2px rgba($lightGrey, 0.5) inset;
 }
