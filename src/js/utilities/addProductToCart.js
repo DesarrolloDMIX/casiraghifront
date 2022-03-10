@@ -58,6 +58,17 @@ export default function (product, options = {}) {
             },
           ],
         });
+        fbq("track", "AddToCart", {
+          currency: "ARS",
+          value: parseInt(fraction.replace(".", "")) + parseInt(cents) / 100,
+          contents: [
+            {
+              id: id,
+              quantity,
+              content_name: name,
+            },
+          ],
+        });
 
         return result;
       }

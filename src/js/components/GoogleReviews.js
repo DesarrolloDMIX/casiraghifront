@@ -45,7 +45,7 @@ const GoogleReviews = function (element) {
   leftArrowElement.addEventListener("click", handleSlide);
 
   this.init = function () {
-    fetch("http://dev557.casiraghi.com.ar/reviews")
+    fetch("https://express.casiraghi.com.ar/reviews")
       .then((res) => res.json())
       .then(({ result }) => {
         const reviewsElement = this.elem.querySelector(".reviews");
