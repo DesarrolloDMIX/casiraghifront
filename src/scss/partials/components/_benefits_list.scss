@@ -1,5 +1,4 @@
 .benefits-list {
-  margin: 0 auto;
   max-width: 1200px;
   &__item {
     box-shadow: 0 5px 5px -5px $midGrey;
@@ -17,7 +16,7 @@
     &__item {
       box-shadow: 1px 1px 3px $midGrey;
       border-radius: 5px;
-      flex: 0 1 50%;
+      flex: 1 1 50%;
       min-width: 250px;
 
       &:last-child {

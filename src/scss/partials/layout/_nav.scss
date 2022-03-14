@@ -223,7 +223,7 @@
       }
 
       &--dropdown .nav__link {
-        padding-right: 30px;
+        padding-right: 15px;
 
         &::after {
           right: 5px;
@@ -243,7 +243,7 @@
         content: "";
         position: absolute;
         top: 0;
-        right: 0;
+        right: -6px;
         width: 25px;
         height: 100%;
         background-color: transparent;

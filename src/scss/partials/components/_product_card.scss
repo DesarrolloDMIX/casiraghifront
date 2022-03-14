@@ -1,3 +1,4 @@
+/*! PRODUCT-CARD <<< */
 .product-card {
   @include flexAlignCenter($dir: column);
   background-color: $darkBg;
@@ -26,7 +27,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, $lightGrey, transparent 25%);
   }
 
   &__img-selector {
@@ -175,3 +175,4 @@
     }
   }
 }
+/*! >>> PRODUCT-CARD */

@@ -151,6 +151,10 @@
     }
     .banner-info__content {
       @include flexAlignCenter($dir: column, $align: stretch);
+
+      .ternium {
+        margin-right: 100px;
+      }
     }
     .banner-info__img-container {
       display: block;
