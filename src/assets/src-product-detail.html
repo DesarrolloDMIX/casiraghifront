@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/font/font-museo-sans.css" />
     <link rel="stylesheet" href="/font/impact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.4/viewer.css"
+      integrity="sha512-caKp8jXImkCfnEGA8RCJPQeW/+wtI9reknlKZMlKnIE8RHgxMBCppLsPvM429eoo0+PSZc9J/dQjVH3OH/K3Xg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>test</title>
   </head>
 
@@ -217,7 +220,7 @@
           alt=""
           data-current-index="0"
         />
-        <div class="product-card__img-overlay"></div>
+        <div class="product-card__img-overlay" style="pointer-events: none;"></div>
         <button
           class="product-card__img-selector icon icon--with-hover product-card__img-selector-prev js-product-card__img-selector-prev"
         >
@@ -310,6 +313,9 @@
           </div>
           <button class="cta-button js-product-card__add-to-cart-button">
             AGREGAR AL CARRITO
+          </button>
+          <button class="cta-button js-product-card__finish-shopping-button">
+            FINALIZAR <br> COMPRA
           </button>
         </div>
         <div
