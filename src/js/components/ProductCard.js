@@ -1,4 +1,5 @@
 import addProductToCart from "../utilities/addProductToCart";
+import viewerjs from "viewerjs";
 
 let ProductCard = function (element) {
   this.cardBottom = element;
@@ -34,6 +35,12 @@ let ProductCard = function (element) {
     ".js-product-card__colors-list"
   );
   this.currentSelectedColor = null;
+  this.viewer = null;
+
+  this.openViewer = (index) => {
+    this.viewer.show();
+    this.viewer.view(index);
+  };
 
   this.handleColorChange = (evt) => {
     if (!evt.target.classList.contains("js-product-card__colors-list-item")) {
@@ -179,6 +186,19 @@ let ProductCard = function (element) {
     Array.from(this.colorsList.children).forEach((color) => {
       color.style.backgroundColor = color.dataset.color;
     });
+
+    let imagesVirtualList = document.createElement("div");
+
+    this.imageListContainer.querySelectorAll("img").forEach((image) => {
+      imagesVirtualList.appendChild(image.cloneNode(true));
+    });
+
+    this.viewer = new viewerjs(imagesVirtualList, {});
+
+    this.currentImage.addEventListener("click", (e) => {
+      this.openViewer(e.target.dataset.currentIndex);
+    });
+    this.currentImage.style.cursor = "pointer";
 
     return this;
   };
