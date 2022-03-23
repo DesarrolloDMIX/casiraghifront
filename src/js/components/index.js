@@ -1,6 +1,7 @@
 import NavToggler from "./NavToggler";
 import Carousel from "./Carousel";
 import ContactForm from "./ContactForm";
+import ProductDetails from "./ProductDetails";
 import ProductCard from "./ProductCard";
 import Slider from "./Slider";
 import Footer from "./Footer";
@@ -15,7 +16,7 @@ export default [
   NavToggler,
   Carousel,
   ContactForm,
-  ProductCard,
+  ProductDetails,
   Slider,
   Footer,
   MultistepForm,
@@ -24,4 +25,5 @@ export default [
   Cart,
   ProductsFilter,
   GoogleReviews,
+  ProductCard,
 ];

@@ -474,27 +474,24 @@
         <div data-position="0" class="carousel__track js-carousel-track">
           <div class="carousel__card--container js-carousel-item">
             <!-- contenedor de la card -->
-            <div class="carousel__card card">
+            <div class="carousel__card card js-card">
               <!-- header -->
               <div class="card__img">
                 <!-- contenedor de la img -->
-                <img src="#" alt="carousel" />
+                <img src="./images/feature-1.png" alt="carousel" />
               </div>
               <!-- body -->
 
               <div class="card__description">
                 <!-- descripción de la card -->
-                <h4 class="card__description--title">título de la card</h4>
+                <h4 class="card__description-title">Chapa cincalum c25 trapezoidal - 2000mm</h4>
               </div>
-
+              <a href="#" class="card__link-overlay"></a>
               <div class="price_see-more-btn__container">
                 <div class="price__box">
                   <p class="price__price">$257,23</p>
                 </div>
                 <div class="see-more__box">
-                  <!-- anchor width 100% -->
-                  <a href="#" class="card__link-overlay"></a>
-                  <!-- anchor width 100% -->
                   <button class="cta-button card__see-more-button">
                     Ver más
                   </button>
@@ -504,22 +501,23 @@
               <div class="iva_text">IVA incluido</div>
 
               <div class="card__add-to-cart-field">
-                <!-- <div class="card__add-to-cart-success-message">
+                <div class="card__add-to-cart-success-message">
                   <p>Agregaste este producto a tu carrito</p>
-                </div> -->
+                </div>
                 <button
                   class="cta-button js-add-to-cart-button"
                   data-product-id="1"
                   data-fraction="200"
                   data-cents="50"
+                  data-product-name="test"
                 >
                   COMPRAR
                 </button>
                 <!-- btn-comprar -->
-                <div class="input--div">
-                  <span class="span_subtrac">-</span>
-                  <input type="number" name="quantity" value="1" />
-                  <span class="span_add">+</span>
+                <div class="card__quantity-input-container">
+                  <button class="card__quantity-input-less">-</button>
+                  <input class="js-product-card__qty-input" type="number" name="quantity" value="1" />
+                  <button class="card__quantity-input-more">+</button>
                 </div>
               </div>
             </div>

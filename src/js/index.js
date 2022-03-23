@@ -46,7 +46,9 @@ let addToCartButtons = Array.from(
 function handleAddToCart(evt) {
   evt.target.onclick = null;
 
-  let qtyInput = evt.target.nextElementSibling;
+  let qtyInput = evt.target.parentNode.querySelector(
+    ".js-product-card__qty-input"
+  );
 
   let product = {
     id: evt.target.dataset.productId,
