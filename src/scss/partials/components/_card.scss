@@ -44,6 +44,7 @@
     font-family: "Impact", "MuseoSans", sans-serif;
     font-weight: 100;
     font-size: 26px;
+    text-align: center;
   }
 
   .price_see-more-btn__container {
@@ -198,6 +199,11 @@
     visibility: visible;
     opacity: 1;
     bottom: 120%;
+  }
+
+  &--list-item {
+    width: 100%;
+    height: 505px;
   }
 }
 /*!<<CARD*/
