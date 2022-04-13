@@ -95,7 +95,9 @@ const GoogleReviews = function (element) {
 
           reviewsElement.innerHTML += `
                 <div class=" review ">
-
+                    <a href="${
+                      review.author_url
+                    }" target="_blank" class="card-review-overlay-link"></a>
                     <div class="card-review">
 
                         <div class="card-review-header" >
@@ -124,14 +126,11 @@ const GoogleReviews = function (element) {
                             <button class="btn-review-author_url">
                                 <a class="review-author_url" href="${
                                   review.author_url
-                                } "> Ver más </a>
+                                } "> Ver reseñas del usuario </a>
                             </button>
                         </div>
 
                     </div>
-                    <a href="${
-                      review.author_url
-                    }" target="_blank" class="card-review-overlay-link"></a>
                 </div>`;
         });
       });
