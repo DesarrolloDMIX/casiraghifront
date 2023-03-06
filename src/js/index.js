@@ -58,7 +58,11 @@ function handleAddToCart(evt) {
     name: evt.target.dataset.productName,
   };
 
-  let resultPromise = addProductToCart(product);
+  const addToCartBehavior = evt.target.dataset.behavior;
+
+  let resultPromise = addProductToCart(product, {
+    redirect: addToCartBehavior === "redirect",
+  });
 
   resultPromise.then((result) => {
     if (!result.success) {

@@ -36,15 +36,6 @@ export default function (product, options = {}) {
     })
     .then((response) => {
       if (response.product_added) {
-        if (Boolean(options.redirect)) {
-          location.href = `${location.protocol}//${location.host}/carrito`;
-        }
-        pubsub.publish("productAddedToCart", {
-          product,
-          newTotal: response.new_total,
-        });
-        result.success = true;
-
         gtag("event", "add_to_cart", {
           value: parseInt(fraction.replace(".", "")) + parseInt(cents) / 100,
           currency: "ARS",
@@ -69,6 +60,15 @@ export default function (product, options = {}) {
             },
           ],
         });
+
+        if (Boolean(options.redirect)) {
+          location.href = `${location.protocol}//${location.host}/carrito`;
+        }
+        pubsub.publish("productAddedToCart", {
+          product,
+          newTotal: response.new_total,
+        });
+        result.success = true;
 
         return result;
       }
