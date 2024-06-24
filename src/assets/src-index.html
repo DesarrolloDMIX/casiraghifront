@@ -485,7 +485,9 @@
 
               <div class="card__description">
                 <!-- descripción de la card -->
-                <h4 class="card__description-title">Chapa cincalum c25 trapezoidal - 2000mm</h4>
+                <h4 class="card__description-title">
+                  Chapa cincalum c25 trapezoidal - 2000mm
+                </h4>
               </div>
               <a href="#" class="card__link-overlay"></a>
               <div class="price_see-more-btn__container">
@@ -517,7 +519,12 @@
                 <!-- btn-comprar -->
                 <div class="card__quantity-input-container">
                   <button class="card__quantity-input-less">-</button>
-                  <input class="js-product-card__qty-input" type="number" name="quantity" value="1" />
+                  <input
+                    class="js-product-card__qty-input"
+                    type="number"
+                    name="quantity"
+                    value="1"
+                  />
                   <button class="card__quantity-input-more">+</button>
                 </div>
               </div>
@@ -763,7 +770,7 @@
               <!-- <p> acá van las estrellas y el rating</p> -->
             </div>
             <div class="google-recommendation">
-              <p>Últimas <strong>5 recomendaciones en Google</strong></p>
+              <p></p>
             </div>
           </div>
           <div class="header-container-right">
@@ -804,60 +811,113 @@
       <div class="footer__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28635.185609066106!2d-58.401893308936955!3d-34.64655267912907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb6cace36833%3A0x42d2d1a01b0c516f!2sLavard%C3%A9n%20519%2C%20C1437%20CABA!5e0!3m2!1sen!2sar!4v1590180572326!5m2!1sen!2sar"
-          frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"></iframe>
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+        ></iframe>
         <div class="footer__under-map">
           <h4>Dirección</h4>
-          <p>Lavardén 519, Ciudad Autónoma de Buenos Aires</p>
+          <p>Manuel García 465, C1437, Ciudad Autónoma de Buenos Aires</p>
           <h4>Horario de atención</h4>
           <p>8:30hs - 16:30hs de Lunes - Viernes</p>
         </div>
       </div>
       <div class="footer__phones-list-slot">
-        <div class="footer__phones-list phones-list" style="
-        width: 100%;">
+        <div class="footer__phones-list phones-list" style="width: 100%">
           <h3 class="phones-list__title">Datos de contacto</h3>
-          <p>Atención a empresas <span style="font-weight: 900;">11-4308-0334</span></p>
-          <p>Venta minorista <span style="font-weight: 900;">11-4308-0212</span></p>
-          <p>Conmutador <span style="font-weight: 900;">11-4308-0330</span></p>
-          <p>e-mail <span style="font-weight: 900;">ventas@casiraghi.com.ar</span></p>
+          <p>
+            Atención a empresas
+            <span style="font-weight: 900">11-4308-0334</span>
+          </p>
+          <p>
+            Venta minorista <span style="font-weight: 900">11-4308-0212</span>
+          </p>
+          <p>Conmutador <span style="font-weight: 900">11-4308-0330</span></p>
+          <p>
+            e-mail <span style="font-weight: 900">ventas@casiraghi.com.ar</span>
+          </p>
         </div>
       </div>
-      <form id="contact" class="footer__contact-form contact-form" method="POST" action="/contacto/enviar-mensaje">
+      <form
+        id="contact"
+        class="footer__contact-form contact-form"
+        method="POST"
+        action="/contacto/enviar-mensaje"
+      >
         <h3 class="contact-form__title mt-0 mb-1">Envianos un e-mail</h3>
-        <script type="text/javascript" src="https://leads.godixital.com/js/leads_form_trigger.js"></script>
-        <input type="hidden" style="display: none;" name="_csrfToken"
-          value="test">
-        <input type="hidden" style="display: none;" name="_path" value="test">
+        <script
+          type="text/javascript"
+          src="https://leads.godixital.com/js/leads_form_trigger.js"
+        ></script>
+        <input
+          type="hidden"
+          style="display: none"
+          name="_csrfToken"
+          value="test"
+        />
+        <input type="hidden" style="display: none" name="_path" value="test" />
         <div class="contact-form__field-set js-contact-form__field-set">
           <div class="flex-row">
             <div class="field">
               <label for="name" class="field__label">Nombre</label>
-              <input data-placeholder="Nombre..." class="field__input" name="name" id="name" />
+              <input
+                data-placeholder="Nombre..."
+                class="field__input"
+                name="name"
+                id="name"
+              />
             </div>
             <div class="field">
               <label for="lastName" class="field__label">Apellido</label>
-              <input data-placeholder="Apellido..." class="field__input" name="lastName" id="lastName" />
+              <input
+                data-placeholder="Apellido..."
+                class="field__input"
+                name="lastName"
+                id="lastName"
+              />
             </div>
           </div>
           <div class="flex-row">
             <div class="field">
               <label for="email" class="field__label">E-mail</label>
-              <input data-placeholder="Correo electrónico..." type="email" class="field__input" required name="email"
-                id="email" />
+              <input
+                data-placeholder="Correo electrónico..."
+                type="email"
+                class="field__input"
+                required
+                name="email"
+                id="email"
+              />
             </div>
             <div class="field">
               <label for="phone" class="field__label">Teléfono</label>
-              <input data-placeholder="Teléfono..." class="field__input" name="phone" id="phone" />
+              <input
+                data-placeholder="Teléfono..."
+                class="field__input"
+                name="phone"
+                id="phone"
+              />
             </div>
           </div>
           <div class="field">
             <label for="phone" class="field__label">Mensaje</label>
-            <textarea name="message" data-placeholder="Mensaje..." id="message"></textarea>
+            <textarea
+              name="message"
+              data-placeholder="Mensaje..."
+              id="message"
+            ></textarea>
           </div>
-          <div style="flex-wrap: wrap;" class="flex-row flex-row--h-center">
-            <div class="g-recaptcha" data-sitekey="6Lfs8ZUbAAAAACSyCkm8Z9dU5W927px-5KyJMd8n"></div>
-            <br>
-            <button type="submit" class="contact-form__button button-secondary color js-contact-form__submit-button">
+          <div style="flex-wrap: wrap" class="flex-row flex-row--h-center">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lfs8ZUbAAAAACSyCkm8Z9dU5W927px-5KyJMd8n"
+            ></div>
+            <br />
+            <button
+              type="submit"
+              class="contact-form__button button-secondary color js-contact-form__submit-button"
+            >
               Enviar!
             </button>
           </div>
@@ -875,28 +935,57 @@
       </div>
       <div class="footer__phone-special phone-special">
         <div class="row mx-0 align-items-center g-1">
-          <div class="col col-auto"><img src="/imgs/965d92ce0d9f486938b67ba9fcb04028.png" style="width:40px">
+          <div class="col col-auto">
+            <img
+              src="/imgs/965d92ce0d9f486938b67ba9fcb04028.png"
+              style="width: 40px"
+            />
           </div>
           <div class="col">
-            <p class="phone-special__label">WhatsApp</p><a
-              href="https://wa.me/5491150579477?text=Hola,%20quería%20preguntar%20lo%20siguiente:" target="_blank"
-              class="phone-special__number">1150579477</a>
+            <p class="phone-special__label">WhatsApp</p>
+            <a
+              href="https://wa.me/5491150579477?text=Hola,%20quería%20preguntar%20lo%20siguiente:"
+              target="_blank"
+              class="phone-special__number"
+              >1150579477</a
+            >
           </div>
         </div>
       </div>
       <div class="footer__water-mark water-mark">
-        <img src="/imgs/23ea4654fe961e125be1b27313b8e0a6.png" alt="Casiraghi hermanos" />
+        <img
+          src="/imgs/23ea4654fe961e125be1b27313b8e0a6.png"
+          alt="Casiraghi hermanos"
+        />
       </div>
       <div class="footer__rights">
-        <p style="text-align: center;"><a
-            href="https://express.casiraghi.com.ar/tienda/content/3-terminos-y-condiciones-de-uso" target="_blank"
-            rel="noreferrer noopener" style="color: #999;text-decoration: underline;">Terminos y condiciones de uso</a></p>
-        <p style="text-align: center;"><a href="https://express.casiraghi.com.ar/tienda/content/1-devoluciones"
-            target="_blank" rel="noreferrer noopener" style="color: #999;text-decoration: underline;">Política de
-            devoluciones</a></p>
-        <p style="text-align: center;"><a href="https://express.casiraghi.com.ar/tienda/content/7-preguntas-frecuentes"
-            target="_blank" rel="noreferrer noopener" style="color: #999;text-decoration: underline;">Preguntas
-            frecuentes</a></p>
+        <p style="text-align: center">
+          <a
+            href="https://express.casiraghi.com.ar/tienda/content/3-terminos-y-condiciones-de-uso"
+            target="_blank"
+            rel="noreferrer noopener"
+            style="color: #999; text-decoration: underline"
+            >Terminos y condiciones de uso</a
+          >
+        </p>
+        <p style="text-align: center">
+          <a
+            href="https://express.casiraghi.com.ar/tienda/content/1-devoluciones"
+            target="_blank"
+            rel="noreferrer noopener"
+            style="color: #999; text-decoration: underline"
+            >Política de devoluciones</a
+          >
+        </p>
+        <p style="text-align: center">
+          <a
+            href="https://express.casiraghi.com.ar/tienda/content/7-preguntas-frecuentes"
+            target="_blank"
+            rel="noreferrer noopener"
+            style="color: #999; text-decoration: underline"
+            >Preguntas frecuentes</a
+          >
+        </p>
         <p>© 2020 Casiraghi Hermanos Todos los derechos reservados</p>
       </div>
     </footer>

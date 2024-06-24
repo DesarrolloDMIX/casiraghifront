@@ -50,6 +50,11 @@ const GoogleReviews = function (element) {
       .then(({ result }) => {
         const reviewsElement = this.elem.querySelector(".reviews");
         const starsElement = this.elem.querySelector(".total-rating-container");
+        const reviewsHeaderText = this.elem.querySelector(
+          ".google-recommendation p"
+        );
+        // Actualizar dinámicamente el texto de la cantidad de reseñas
+        reviewsHeaderText.innerHTML = `Últimas <strong>${result.reviews.length} recomendaciones en Google</strong>`;
 
         starsElement.innerHTML += `
                     <div class="total-rating">
@@ -133,6 +138,12 @@ const GoogleReviews = function (element) {
                     </div>
                 </div>`;
         });
+
+        if (result.reviews.length === 2) {
+          reviewsElement.classList.add("centered-reviews");
+        } else {
+          reviewsElement.classList.remove("centered-reviews");
+        }
       });
     return this;
   };

@@ -12,6 +12,12 @@
 .review {
   position: relative;
 }
+
+.centered-reviews {
+  display: flex;
+  justify-content: center;
+}
+
 .card-review-overlay-link {
   position: absolute;
   top: 0;
