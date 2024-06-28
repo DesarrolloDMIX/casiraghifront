@@ -43,7 +43,7 @@ const GoogleReviews = function (element) {
   };
   rightArrowElement.addEventListener("click", handleSlide);
   leftArrowElement.addEventListener("click", handleSlide);
-
+  const cant = result.reviews.length;
   this.init = function () {
     fetch("https://express.casiraghi.com.ar/reviews")
       .then((res) => res.json())
@@ -99,7 +99,7 @@ const GoogleReviews = function (element) {
           }
 
           reviewsElement.innerHTML += `
-                <div class=" review ">
+                <div style= class=" review">
                     <a href="${
                       review.author_url
                     }" target="_blank" class="card-review-overlay-link"></a>
@@ -139,7 +139,7 @@ const GoogleReviews = function (element) {
                 </div>`;
         });
 
-        if (result.reviews.length === 2) {
+        if (result.reviews.length <= 2) {
           reviewsElement.classList.add("centered-reviews");
         } else {
           reviewsElement.classList.remove("centered-reviews");
